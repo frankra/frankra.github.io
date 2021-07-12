@@ -1,3 +1,36 @@
 {
-    
+    "name": "Rafael Frank",
+    "role": "Senior Software Engineer",
+    "description": "8+ years of developing world class enterprise software. Extraordinary performer recognized by managements and peers for skillset, leadership, positivity and getting the job done.",
+    "email": "rafael.h.frank@gmail.com",
+    "phone": "+49 151 6783 4643",
+    "location": "Berlin, Germany",
+    "githubUrl": "https://github.com/frankra",
+    "linkedinUrl": "https://linkedin.com/in/frankra",
+    "experiences": [
+        {
+            "role": "Senior Software Engineer",
+            "company": "SAP SE",
+            "from": "03/2021",
+            "to": "Present",
+            "location": "Berlin, Germany",
+            "description": "Member of the Core and Infrastructure team",
+            "activities": [
+                {
+                    "description": "Main responsible for the multitenancy setup of the application"
+                },
+                {
+                   "description" : "adada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd awadada wdd aw dawdawdawda awd awd aw"
+                }
+            ],
+            "skills": [
+                {
+                    "name": "SaaS"
+                }
+            ]
+        }
+    ],
+    "awards":[],
+    "education": []
+
 }

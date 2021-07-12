@@ -1,0 +1,46 @@
+:root {
+    --header-font-color: #ffffff;
+    --content-font-color: #000000;
+}
+
+.cv {
+    font-weight: 400;
+    font-style: normal;
+    color: var(--header-font-color)
+}
+
+.cv .header {
+    background-color: #313c4e;
+}
+
+.cv .header .name {
+    font-size: 46px;
+    line-height: 40px;
+}
+
+.cv .header .role {
+    color: #449399;
+    font-size: 22px;
+}
+
+.cv .header .description {
+    font-size: 16px;
+}
+
+.cv .sub-header {
+    background-color: #222a33;
+}
+
+.cv .sub-header a {
+    color: var(--header-font-color);
+}
+
+.cv .content {
+    color: var(--content-font-color);
+}
+
+.cv .content .title {
+    color: #449399;
+    font-weight: 700;
+    font-size: 28px;
+}

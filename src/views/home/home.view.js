@@ -1,4 +1,3 @@
-import { client } from '../../rest.client.js'; 
 
 const template = `
 <div>
