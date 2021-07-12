@@ -12,7 +12,7 @@ const template = `
         </div>
     </div>
  
-    <div class="p-4 sub-header">
+    <div class="ps-4 pe-4 pt-2 pb-2 sub-header">
         <div class="row mb-2">
             <div class="col-6">
                 <i class="bi bi-envelope"></i>

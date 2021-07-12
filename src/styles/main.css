@@ -1,12 +1,45 @@
 :root {
     --header-font-color: #ffffff;
     --content-font-color: #000000;
+
+    --primary-font-color: #449399;
+    --primary-font-size: 16px;
+    --secondary-font-color: #449399;
 }
 
 .cv {
     font-weight: 400;
     font-style: normal;
     color: var(--header-font-color)
+}
+
+.cv .title-secondary {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--primary-font-color);
+}
+
+.cv .text-secondary {
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+.cv ul{
+    list-style: none;
+}
+
+.cv li{
+    margin-left: -1em;
+}
+
+.cv li::before{
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    color: var(--primary-font-color);
 }
 
 .cv .header {
@@ -19,12 +52,12 @@
 }
 
 .cv .header .role {
-    color: #449399;
+    color: var(--primary-font-color);
     font-size: 22px;
 }
 
 .cv .header .description {
-    font-size: 16px;
+    font-size: var(--primary-font-size);
 }
 
 .cv .sub-header {
@@ -40,7 +73,34 @@
 }
 
 .cv .content .title {
-    color: #449399;
+    color: var(--primary-font-color);
     font-weight: 700;
     font-size: 28px;
+    text-decoration: underline;
+}
+
+.cv .work-experience-item {
+    font-size: var(--primary-font-size);
+}
+
+.cv .work-experience-item .role {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.cv .work-experience-item .company {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+
+.cv .work-experience-item .pill{
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #d8d5d5;
+    margin-right: 2px;
 }
