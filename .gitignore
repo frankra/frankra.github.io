@@ -1,0 +1,8 @@
+node_modules
+*.log
+*.rdb
+.nyc_output/
+.idea
+coverage
+.DS_Store
+.eslintcache

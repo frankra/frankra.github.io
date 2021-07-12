@@ -1,0 +1,24 @@
+{
+  "name": "frankra.github.io",
+  "version": "1.0.0",
+  "description": "Frankra's Personal Webpage",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankra/frankra.github.io.git"
+  },
+  "author": "frankra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frankra/frankra.github.io/issues"
+  },
+  "homepage": "https://github.com/frankra/frankra.github.io#readme",
+
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
