@@ -1,7 +1,7 @@
 const template = `
 <div class="award-item mb-4">
     <div class="row">
-        <span>{{award.title}}</span>
+        <span class="fw-bolder">{{award.title}}</span>
     </div>
     <div class="row">
         <span class="text-secondary">{{award.institution}}</span>

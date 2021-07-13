@@ -16,7 +16,7 @@ const template = `
         <div class="row mb-2">
             <div class="col-6">
                 <i class="me-2 bi bi-envelope"></i>
-                {{resume.email}}
+                <a v-bind:href="'mailto:' + resume.email">{{resume.email}}</a>
             </div>
             <div class="col-6">
                 <i class="me-2 bi bi-phone"></i>

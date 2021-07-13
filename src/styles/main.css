@@ -66,6 +66,7 @@
 
 .cv .sub-header a {
     color: var(--header-font-color);
+    text-decoration: none;
 }
 
 .cv .content {

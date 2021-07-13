@@ -1,7 +1,7 @@
 {
     "name": "Rafael Frank",
     "role": "Senior Software Engineer",
-    "description": "8+ years of developing world class enterprise software. Extraordinary performer recognized by managements and peers for skillset, leadership, positivity and getting the job done.",
+    "description": "8+ years of developing world class enterprise software. Extraordinary performer recognized by management and peers for skillset, leadership, positivity and getting the job done.",
     "email": "rafael.h.frank@gmail.com",
     "phone": "+49 151 6783 4643",
     "location": "Berlin, Germany",
@@ -142,7 +142,7 @@
             "institution": "SAP Labs Latin America",
             "location": "São Leopoldo, Brazil",
             "date": "2017",
-            "description": "The Predictive Maintenance app that we developed with Burger King analyzed the data from the sensors and predicted potential surges in the readings, this was especially important for the broiler, as surges in the temperature would often lead to fire."
+            "description": "In small development teams of around 5 members, we got assigned to closely work with customers in solving some of their biggest pain points. For our assigned customer who was a big player in the food industry, we developed a predictive maintenance app that would, among other things, analyze the data collected from sensors in their broiler and help predict temperature surges, which not only reduced the risk of fire but also decreased their insurance costs."
         },
         {
             "title": "First Place at UFRGS Entrepreneurship Marathon (Flimbo)",
@@ -190,6 +190,20 @@
             "to": "12/2017",
             "level": "Superior",
             "location": "São Leopoldo, Brazil"
+        }
+    ],
+    "languages": [
+        {
+            "name": "Portuguese",
+            "proficiency": "Native"
+        },
+        {
+            "name": "English",
+            "proficiency": "Proficient"
+        },
+        {
+            "name": "German",
+            "proficiency": "Intermediate"
         }
     ]
 }

@@ -3,6 +3,7 @@ import { resumeWorkExperienceItem } from './resume-work-experience-item.componen
 import { resumeAwardItem } from './resume-award-item.component.js';
 import { resumeInitiativeItem } from './resume-initiative-item.component.js';
 import { resumeEducationItem } from './resume-education-item.component.js';
+import { resumeLanguageItem } from './resume-language-item.component.js';
 
 const template = `
 <div id="resume" class="cv container">
@@ -48,6 +49,16 @@ const template = `
                 v-bind:education="education">
             </resume-education-item>
         </div>
+
+        <div class="section pt-4 pr-4 pl-4 pb-2">
+        <div class="mb-2">
+            <span class="title">LANGUAGES</span>
+        </div>
+        <resume-language-item 
+            v-for="language in resume.languages"
+            v-bind:language="language">
+        </resume-language-item>
+    </div>
     </div>
 </div>
 `
