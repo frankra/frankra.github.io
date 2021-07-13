@@ -70,6 +70,13 @@
 
 .cv .content {
     color: var(--content-font-color);
+    columns: 2;
+}
+
+.cv .content .section {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid; /* Firefox is dumb */
+    break-inside: avoid;
 }
 
 .cv .content .title {

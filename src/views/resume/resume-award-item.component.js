@@ -17,7 +17,6 @@ const template = `
             <span>{{award.description}}</span>
         </li>
     </ul>
-   
 </div>
 `
 

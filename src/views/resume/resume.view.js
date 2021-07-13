@@ -1,14 +1,15 @@
 import { resumeHeader } from './resume-header.component.js';
 import { resumeWorkExperienceItem } from './resume-work-experience-item.component.js';
 import { resumeAwardItem } from './resume-award-item.component.js';
+import { resumeInitiativeItem } from './resume-initiative-item.component.js';
+import { resumeEducationItem } from './resume-education-item.component.js';
 
 const template = `
 <div id="resume" class="cv container">
     <resume-header v-bind:resume="resume"></resume-header>
 
-    <div class="d-flex flex-wrap content">
-
-        <div class="col-6 p-4">
+    <div class="content">
+        <div class="section pt-4 ps-4 pe-4 pb-2">
             <div class="mb-2">
                 <span class="title">WORK EXPERIENCE</span>
             </div>
@@ -18,7 +19,7 @@ const template = `
             </resume-work-experience-item>
         </div>
 
-        <div class="col-6 p-4">
+        <div class="section pt-4 pr-4 pl-4 pb-2">
             <div class="mb-2">
                 <span class="title">AWARDS</span>
             </div>
@@ -26,6 +27,26 @@ const template = `
                 v-for="award in resume.awards"
                 v-bind:award="award">
             </resume-award-item>
+        </div>
+
+        <div class="section pt-4 pr-4 pl-4 pb-2">
+            <div class="mb-2">
+                <span class="title">INITIATIVES</span>
+            </div>
+            <resume-initiative-item 
+                v-for="initiative in resume.initiatives"
+                v-bind:initiative="initiative">
+            </resume-initiative-item>
+        </div>
+
+        <div class="section pt-4 pr-4 pl-4 pb-2">
+            <div class="mb-2">
+                <span class="title">EDUCATION</span>
+            </div>
+            <resume-education-item 
+                v-for="education in resume.education"
+                v-bind:education="education">
+            </resume-education-item>
         </div>
     </div>
 </div>

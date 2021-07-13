@@ -8,7 +8,7 @@ const template = `
     </div>
     <div class="row">
         <div class="col-6">
-            <span class="title-secondary">{{experience.from}}</span> - <span class="title-secondary">{{experience.to}}</span>
+            <span class="title-secondary">{{experience.from}} - {{experience.to}}</span>
         </div>
         <div class="col-6 text-end title-secondary">{{experience.location}}</div>
     </div>

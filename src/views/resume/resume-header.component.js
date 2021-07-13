@@ -15,27 +15,27 @@ const template = `
     <div class="ps-4 pe-4 pt-2 pb-2 sub-header">
         <div class="row mb-2">
             <div class="col-6">
-                <i class="bi bi-envelope"></i>
+                <i class="me-2 bi bi-envelope"></i>
                 {{resume.email}}
             </div>
             <div class="col-6">
-                <i class="bi bi-phone"></i>
+                <i class="me-2 bi bi-phone"></i>
                 {{resume.phone}}
             </div>
         </div>
         <div class="row mb-2">
             <div class="col-6">
-                <i class="bi bi-pin-map"></i>
+                <i class="me-2 bi bi-pin-map"></i>
                 {{resume.location}}
             </div>
             <div class="col-6">
-                <i class="bi bi-linkedin"></i>
+                <i class="me-2 bi bi-linkedin"></i>
                 <a v-bind:href="resume.linkedinUrl">{{this.removeHttpsFromUrl(resume.linkedinUrl)}}</a>
             </div>
         </div>
         <div class="row mb-2">
             <div class="col-6">
-                <i class="bi bi-github"></i>
+                <i class="me-2 bi bi-github"></i>
                 <a v-bind:href="resume.githubUrl">{{this.removeHttpsFromUrl(resume.githubUrl)}}</a>
             </div>
         </div>
