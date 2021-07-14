@@ -69,12 +69,13 @@ const template = `
         </div>
 
         <div class="section col-sm-6 float-end p-2">
-            <div class="block" v-for="interest in resume.interests">
+            <div class="block" >
                 <div class="mb-2">
                     <span class="title">INTERESTS</span>
                 </div>
                 <div class="d-flex flex-wrap">
                     <resume-interest-item 
+                        v-for="interest in resume.interests"
                         v-bind:interest="interest">
                     </resume-interest-item>
                 </div>
