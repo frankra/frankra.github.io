@@ -1,10 +1,13 @@
 :root {
     --header-font-color: #ffffff;
     --content-font-color: #000000;
-
     --primary-font-color: #449399;
-    --primary-font-size: 16px;
+    --primary-font-size: 18px;
     --secondary-font-color: #449399;
+    --secondary-font-size: 14px;
+    --smaller-font-size: 12px;
+    --header-font-size: 36px;
+    --title-font-size: 22px;
 }
 
 .cv {
@@ -14,13 +17,13 @@
 }
 
 .cv .title-secondary {
-    font-size: 14px;
+    font-size: var(--secondary-font-size);
     font-style: italic;
     color: var(--primary-font-color);
 }
 
 .cv .text-secondary {
-    font-size: 14px;
+    font-size: var(--secondary-font-size);
     font-style: italic;
 }
 
@@ -35,7 +38,7 @@
 }
 
 .cv .big-pill{
-    font-size: 16px;
+    font-size: var(--primary-font-size);
     font-weight: normal;
     border-radius: 10px;
     padding-left: 8px;
@@ -50,6 +53,7 @@
 
 .cv li{
     margin-left: -1em;
+    font-size: var(--secondary-font-size);
 }
 
 .cv li::before{
@@ -66,17 +70,17 @@
 }
 
 .cv .header .name {
-    font-size: 46px;
+    font-size: var(--header-font-size);
     line-height: 40px;
 }
 
 .cv .header .role {
     color: var(--primary-font-color);
-    font-size: 22px;
+    font-size: var(--primary-font-size);
 }
 
 .cv .header .description {
-    font-size: var(--primary-font-size);
+    font-size: var(--primary-secondary-size);
 }
 
 .cv .sub-header {
@@ -95,18 +99,18 @@
 .cv .content .title {
     color: var(--primary-font-color);
     font-weight: 700;
-    font-size: 28px;
+    font-size: var(--title-font-size);
     text-decoration: underline;
 }
 
 .cv .work-experience-item .role {
-    font-size: 22px;
+    font-size: var(--primary-font-size);
     font-weight: bold;
     line-height: 24px;
 }
 
 .cv .work-experience-item .company {
-    font-size: 22px;
+    font-size: var(--primary-font-size);
     line-height: 24px;
 }
 
@@ -121,6 +125,9 @@
     display: initial;
 } 
 
+footer {
+    color: black
+}
 @media print {
     .no-print{
         display: none;
@@ -133,15 +140,16 @@
         padding: 0 !important;
         max-width: unset;
     }
-}
+        
+    @page:first {
+        margin-top:0;
+    }
 
-@page:first {
-    margin-top:0;
-}
+    @page {
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0;   
+    }
 
-@page {
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 0;   
 }
