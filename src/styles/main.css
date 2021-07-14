@@ -110,13 +110,20 @@
     line-height: 24px;
 }
 
+.cv .content .block {
+    page-break-inside: avoid;
+}
+.cv .content .block .title {
+    display: none;
+} 
+
+.cv .content .block:first-of-type .title{
+    display: initial;
+} 
 
 @media print {
     .no-print{
         display: none;
-    }
-    span.title {
-        page-break-before: always;
     }
     div.item {
         page-break-inside: avoid;
@@ -128,9 +135,13 @@
     }
 }
 
+@page:first {
+    margin-top:0;
+}
+
 @page {
     margin: 0;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 0;
+    padding: 0;   
 }

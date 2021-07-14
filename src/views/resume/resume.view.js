@@ -12,67 +12,73 @@ const template = `
 
     <div class="content mb-4 mt-2 ms-3 me-3">
         <div class="section col-sm-6 float-start p-2">
-            <div class="mb-2">
-                <span class="title">WORK EXPERIENCE</span>
+            <div class="block" v-for="experience in resume.experiences">
+                <div class="mb-2">
+                    <span class="title">WORK EXPERIENCE</span>
+                </div>
+                <resume-work-experience-item 
+                    v-bind:experience="experience">
+                </resume-work-experience-item>
             </div>
-            <resume-work-experience-item 
-                v-for="experience in resume.experiences"
-                v-bind:experience="experience">
-            </resume-work-experience-item>
         </div>
 
         <div class="section col-sm-6 float-end p-2">
-            <div class="mb-2">
-                <span class="title">AWARDS</span>
+            <div class="block" v-for="award in resume.awards">
+                <div class="mb-2">
+                    <span class="title">AWARDS</span>
+                </div>
+                <resume-award-item 
+                    v-bind:award="award">
+                </resume-award-item>
             </div>
-            <resume-award-item 
-                v-for="award in resume.awards"
-                v-bind:award="award">
-            </resume-award-item>
         </div>
 
         <div class="section col-sm-6 float-end p-2">
-            <div class="mb-2">
-                <span class="title">INITIATIVES</span>
+            <div class="block" v-for="initiative in resume.initiatives">
+                <div class="mb-2">
+                    <span class="title">INITIATIVES</span>
+                </div>
+                <resume-initiative-item 
+                    v-bind:initiative="initiative">
+                </resume-initiative-item>
             </div>
-            <resume-initiative-item 
-                v-for="initiative in resume.initiatives"
-                v-bind:initiative="initiative">
-            </resume-initiative-item>
         </div>
 
         <div class="section col-sm-6 float-end p-2">
-            <div class="mb-2">
-                <span class="title">EDUCATION</span>
+            <div class="block" v-for="education in resume.education">
+                <div class="mb-2">
+                    <span class="title">EDUCATION</span>
+                </div>
+                <resume-education-item 
+                    v-bind:education="education">
+                </resume-education-item>
             </div>
-            <resume-education-item 
-                v-for="education in resume.education"
-                v-bind:education="education">
-            </resume-education-item>
         </div>
 
         <div class="section col-sm-6 float-end p-2">
-            <div class="mb-2">
-                <span class="title">LANGUAGES</span>
+            <div class="block" v-for="language in resume.languages">
+                <div class="mb-2">
+                    <span class="title">LANGUAGES</span>
+                </div>
+                <ul>
+                    <resume-language-item 
+                        v-bind:language="language">
+                    </resume-language-item>
+                </ul>
             </div>
-            <ul>
-                <resume-language-item 
-                    v-for="language in resume.languages"
-                    v-bind:language="language">
-                </resume-language-item>
-            </ul>
         </div>
 
         <div class="section col-sm-6 float-end p-2">
-            <div class="mb-2">
-                <span class="title">INTERESTS</span>
-            </div>
-            <div class="d-flex flex-wrap">
-                <resume-interest-item 
-                    v-for="interest in resume.interests"
-                    v-bind:interest="interest">
-                </resume-interest-item>
-            </div>
+            <div class="block" v-for="interest in resume.interests">
+                <div class="mb-2">
+                    <span class="title">INTERESTS</span>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <resume-interest-item 
+                        v-bind:interest="interest">
+                    </resume-interest-item>
+                </div>
+            </div>    
         </div>
     </div>
 </div>
