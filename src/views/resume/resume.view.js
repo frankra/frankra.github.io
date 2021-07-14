@@ -10,8 +10,8 @@ const template = `
 <div id="resume" class="cv container">
     <resume-header v-bind:resume="resume"></resume-header>
 
-    <div class="content">
-        <div class="section pt-4 ps-4 pe-4 pb-2">
+    <div class="content mb-4 mt-2 ms-3 me-3">
+        <div class="section col-sm-6 float-start p-2">
             <div class="mb-2">
                 <span class="title">WORK EXPERIENCE</span>
             </div>
@@ -21,7 +21,7 @@ const template = `
             </resume-work-experience-item>
         </div>
 
-        <div class="section pt-4 pr-4 pl-4 pb-2">
+        <div class="section col-sm-6 float-end p-2">
             <div class="mb-2">
                 <span class="title">AWARDS</span>
             </div>
@@ -31,7 +31,7 @@ const template = `
             </resume-award-item>
         </div>
 
-        <div class="section pt-4 pr-4 pl-4 pb-2">
+        <div class="section col-sm-6 float-end p-2">
             <div class="mb-2">
                 <span class="title">INITIATIVES</span>
             </div>
@@ -41,7 +41,7 @@ const template = `
             </resume-initiative-item>
         </div>
 
-        <div class="section pt-4 pr-4 pl-4 pb-2">
+        <div class="section col-sm-6 float-end p-2">
             <div class="mb-2">
                 <span class="title">EDUCATION</span>
             </div>
@@ -51,17 +51,19 @@ const template = `
             </resume-education-item>
         </div>
 
-        <div class="section pt-4 pr-4 pl-4 pb-2">
+        <div class="section col-sm-6 float-end p-2">
             <div class="mb-2">
                 <span class="title">LANGUAGES</span>
             </div>
-            <resume-language-item 
-                v-for="language in resume.languages"
-                v-bind:language="language">
-            </resume-language-item>
+            <ul>
+                <resume-language-item 
+                    v-for="language in resume.languages"
+                    v-bind:language="language">
+                </resume-language-item>
+            </ul>
         </div>
 
-        <div class="section pt-4 pr-4 pl-4 pb-2">
+        <div class="section col-sm-6 float-end p-2">
             <div class="mb-2">
                 <span class="title">INTERESTS</span>
             </div>

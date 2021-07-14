@@ -10,10 +10,6 @@ const template = `
         <div class="row mt-3 description">
             <span>{{resume.description}}</span>
         </div>
-
-        <div class="float-end d-inline p-2 position-absolute top-0 end-0">
-            <button type="button" class="btn btn-sm btn-dark bi bi-printer no-print" v-on:click="print"></button>
-        </div>
     </div>
  
     <div class="ps-4 pe-4 pt-2 pb-2 sub-header">
@@ -55,9 +51,6 @@ const resumeHeader = Vue.component('resume-header', {
             if (url) {
                 return url.replace(`https://`, '');
             }
-        },
-        print() {
-            window.print();
         }
     }
 });
