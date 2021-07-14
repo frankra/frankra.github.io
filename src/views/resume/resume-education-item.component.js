@@ -1,5 +1,5 @@
 const template = `
-<div class="education-item mb-4">
+<div class="education-item item mb-4">
     <div class="row">
         <span class="fw-bolder">{{education.title}}</span>
     </div>

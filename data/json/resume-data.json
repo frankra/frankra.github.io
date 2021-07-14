@@ -205,5 +205,19 @@
             "name": "German",
             "proficiency": "Intermediate"
         }
+    ],
+    "interests": [
+        {
+            "name": "Motorcycles"
+        },
+        {
+            "name": "Crossfit"
+        },
+        {
+            "name": "Games"
+        },
+        {
+            "name": "Electronic Music"
+        }
     ]
 }

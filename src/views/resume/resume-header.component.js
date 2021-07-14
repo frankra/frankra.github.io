@@ -1,6 +1,6 @@
 const template = `
 <div>
-    <div class="p-4 header">
+    <div class="p-4 header d-block position-relative">
         <div class="row name">
             <span>{{resume.name}}</span>
         </div>
@@ -9,6 +9,10 @@ const template = `
         </div>
         <div class="row mt-3 description">
             <span>{{resume.description}}</span>
+        </div>
+
+        <div class="float-end d-inline p-2 position-absolute top-0 end-0">
+            <button type="button" class="btn btn-sm btn-dark bi bi-printer no-print" v-on:click="print"></button>
         </div>
     </div>
  
@@ -47,10 +51,13 @@ const resumeHeader = Vue.component('resume-header', {
     props: ['resume'],
     template,
     methods: {
-        removeHttpsFromUrl(url){
-            if (url){
-                return url.replace(`https://`,'');
+        removeHttpsFromUrl(url) {
+            if (url) {
+                return url.replace(`https://`, '');
             }
+        },
+        print() {
+            window.print();
         }
     }
 });
