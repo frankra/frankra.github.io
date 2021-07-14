@@ -118,7 +118,7 @@
     span.title {
         page-break-before: always;
     }
-    div.item, div.pill {
+    div.item {
         page-break-inside: avoid;
     }
     div#resume {
