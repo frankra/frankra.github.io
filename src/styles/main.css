@@ -117,11 +117,11 @@
 .cv .content .block {
     page-break-inside: avoid;
 }
-.cv .content .block .title {
+.cv .content .block .title span{
     display: none;
 } 
 
-.cv .content .block:first-of-type .title{
+.cv .content .block:first-of-type .title span{
     display: initial;
 } 
 

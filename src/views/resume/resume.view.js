@@ -13,8 +13,8 @@ const template = `
     <div class="content mb-4 mt-2 ms-3 me-3">
         <div class="section col-sm-6 float-start p-2">
             <div class="block" v-for="experience in resume.experiences">
-                <div class="mb-2">
-                    <span class="title">WORK EXPERIENCE</span>
+                <div class="mb-2 title">
+                    <span>WORK EXPERIENCE</span>
                 </div>
                 <resume-work-experience-item 
                     v-bind:experience="experience">
@@ -24,8 +24,8 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" v-for="award in resume.awards">
-                <div class="mb-2">
-                    <span class="title">AWARDS</span>
+                <div class="mb-2 title">
+                    <span>AWARDS</span>
                 </div>
                 <resume-award-item 
                     v-bind:award="award">
@@ -35,8 +35,8 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" v-for="initiative in resume.initiatives">
-                <div class="mb-2">
-                    <span class="title">INITIATIVES</span>
+                <div class="mb-2 title">
+                    <span>INITIATIVES</span>
                 </div>
                 <resume-initiative-item 
                     v-bind:initiative="initiative">
@@ -46,8 +46,8 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" v-for="education in resume.education">
-                <div class="mb-2">
-                    <span class="title">EDUCATION</span>
+                <div class="mb-2 title">
+                    <span>EDUCATION</span>
                 </div>
                 <resume-education-item 
                     v-bind:education="education">
@@ -57,8 +57,8 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" v-for="language in resume.languages">
-                <div class="mb-2">
-                    <span class="title">LANGUAGES</span>
+                <div class="mb-2 title">
+                    <span>LANGUAGES</span>
                 </div>
                 <ul>
                     <resume-language-item 
@@ -70,8 +70,8 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" >
-                <div class="mb-2">
-                    <span class="title">INTERESTS</span>
+                <div class="mb-2 title">
+                    <span>INTERESTS</span>
                 </div>
                 <div class="d-flex flex-wrap">
                     <resume-interest-item 
@@ -83,7 +83,26 @@ const template = `
         </div>
     </div>
 </div>
-`
+`;
+
+
+//src: https://www.papersizes.org/a-sizes-in-pixels.htm
+const A4_PAGE_HEIGHT_MAP_PER_PPI = {
+    // ppi : height in px
+    ppi_72: 595,
+    ppi_96: 794,
+    ppi_150: 1240,
+    ppi_300: 2480,
+    ppi_600: 4960,
+    ppi_720: 5953,
+    ppi_1200: 9921
+}
+
+const APP_HEADER_HEIGHT_PX = 56;
+
+const BLOCK_TITLE_DIV_SELECTOR = '.block .title';
+
+const PAGE_HEADER_AREA_SCAN_HEIGHT_PX = 230; //shia_la_beouf_magic.gif
 
 const resumeView = Vue.component('resume-view', {
     template,
@@ -94,11 +113,74 @@ const resumeView = Vue.component('resume-view', {
             }
         }
     },
-    created: async function () {
-        const request = await fetch('/data/json/resume-data.json');
-        const resume = await request.json();
+    methods: {
+        getAllTitles() {
+            return [...document.querySelectorAll(BLOCK_TITLE_DIV_SELECTOR)];
+        },
+        getAllTitlesAfterPageBreak() {
+            return this.getAllTitles()
+                .filter(titleDiv => {
+                    const pageCount = this.getPrintPageCount();
+                    const pageHeightForThisDevice = this.getPrintPageHeightForThisDevice();
+                    const boundingRect = titleDiv.getBoundingClientRect();
+                    const elementCurrentY = boundingRect.y + window.pageYOffset;
+                    let scanStart;
+                    let scanEnd;
+                    for (let i = 1/*cause 1st page is already covered*/; i < pageCount; i++) {
+                        scanStart = (i * pageHeightForThisDevice) + APP_HEADER_HEIGHT_PX;
+                        scanEnd = scanStart + PAGE_HEADER_AREA_SCAN_HEIGHT_PX;
+                        if (elementCurrentY >= scanStart && elementCurrentY <= scanEnd){
+                            return true;
+                        }
+                    }
+                })
+                .map(titleDiv=> titleDiv.firstChild)
+        },
 
-        this.resume = resume;
+        addTitlesAfterPageBreakForPrinting(event) {
+            this.getAllTitlesAfterPageBreak().forEach(title => {
+                title.style.display = 'block';
+            });
+        },
+        removeTitlesAddedForPrinting(event) {
+            this.getAllTitlesAfterPageBreak().forEach(title => {
+                title.style.display = 'none';
+            });
+        },
+        getMonitorPPI() {
+            const elem = document.createElement('div');
+            elem.style.width = '1in';
+            document.body.appendChild(elem);
+            const ppi = elem.offsetWidth;
+            document.body.removeChild(elem);
+            return ppi;
+        },
+        getPrintPageHeightForThisDevice() {
+            return A4_PAGE_HEIGHT_MAP_PER_PPI[`ppi_${this.getMonitorPPI()}`];
+        },
+        getDocumentHeight() {
+            //get <HTML> height
+            return document.firstChild.clientHeight;
+        },
+        getPrintPageCount() {
+            return Math.round(this.getDocumentHeight() / this.getPrintPageHeightForThisDevice());
+        },
+        async loadResume() {
+            const request = await fetch('/data/json/resume-data.json');
+            const resume = await request.json();
+
+            this.resume = resume;
+        }
+    },
+    created: async function () {
+        window.addEventListener('beforeprint', this.addTitlesAfterPageBreakForPrinting);
+        window.addEventListener('afterprint', this.removeTitlesAddedForPrinting);
+
+        await this.loadResume();
+    },
+    destroyed() {
+        window.removeEventListener('beforeprint', this.addTitlesAfterPageBreakForPrinting);
+        window.removeEventListener('afterprint', this.removeTitlesAddedForPrinting);
     }
 });
 

@@ -41,7 +41,7 @@ const template = `
         </div>
     </div>
 </div>
-`
+`;
 
 const resumeHeader = Vue.component('resume-header', {
     props: ['resume'],
