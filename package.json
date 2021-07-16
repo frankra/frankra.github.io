@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ."
+    "start": "http-server .",
+    "compile-cv": "js-yaml data/resume/frankra.yaml > data/resume/frankra.json"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,8 @@
     "url": "https://github.com/frankra/frankra.github.io/issues"
   },
   "homepage": "https://github.com/frankra/frankra.github.io#readme",
-
   "devDependencies": {
-    "http-server": "^0.12.3"
+    "http-server": "^0.12.3",
+    "js-yaml": "^3.14.1"
   }
 }

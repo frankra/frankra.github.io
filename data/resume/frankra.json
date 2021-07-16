@@ -1,0 +1,223 @@
+{
+  "name": "Rafael Frank",
+  "role": "Senior Software Engineer",
+  "description": "8+ years of developing world class enterprise software. Extraordinary performer recognized by management and peers for skillset, leadership, positivity and getting the job done.",
+  "email": "rafael.h.frank@gmail.com",
+  "phone": "+49 151 6783 4643",
+  "location": "Berlin, Germany",
+  "githubUrl": "https://github.com/frankra",
+  "linkedinUrl": "https://linkedin.com/in/frankra",
+  "experiences": [
+    {
+      "role": "Senior Software Engineer",
+      "company": "SAP SE",
+      "from": "03/2021",
+      "to": "Present",
+      "location": "Berlin, Germany",
+      "description": "Integrated Business Suite of No Code/Low Code applications powered by SAP Business Technology Platform.",
+      "activities": [
+        {
+          "description": "One of the leading members of the Core and Infrastructure team."
+        },
+        {
+          "description": "Responsible for the multitenancy enablement of the integrated suite."
+        },
+        {
+          "description": "Member of the security and compliance group."
+        }
+      ],
+      "skills": [
+        {
+          "name": "SaaS"
+        },
+        {
+          "name": "Javascript"
+        }
+      ]
+    },
+    {
+      "role": "Senior Software Engineer",
+      "company": "Ruum by SAP (SAP SE)",
+      "from": "04/2019",
+      "to": "03/2021",
+      "location": "Berlin, Germany",
+      "description": "Ruum is a Low Code/No Code application that allow users to easily model, run and monitor business processes.",
+      "activities": [
+        {
+          "description": "Designed and implemented the OData framework that serves both internal and public APIs."
+        },
+        {
+          "description": "Designed and implemented the web hooks system."
+        },
+        {
+          "description": "Main responsible contact for technically supporting customers regarding integration topics."
+        }
+      ],
+      "skills": [
+        {
+          "name": "SaaS"
+        },
+        {
+          "name": "Javascript"
+        }
+      ]
+    },
+    {
+      "role": "Co-Founder",
+      "company": "Flimbo",
+      "from": "03/2015",
+      "to": "07/2016",
+      "location": "São Leopoldo, Brazil",
+      "description": "Online vectorial editor, focused on creating, maintaining and sharing marketing content on online social networks.",
+      "activities": [
+        {
+          "description": "Main driver of the project, who had the idea and assembled the initial team of founders."
+        },
+        {
+          "description": "Defined the commercialization model and the roadmap."
+        },
+        {
+          "description": "Designed and developed 90%+ of the backend stack and infrastructure."
+        },
+        {
+          "description": "Implemented the Paywall framework and integration with Stripe."
+        },
+        {
+          "description": "Integrated the application with the major social media networks, which allow paying customers to share designs directly out of the platform."
+        }
+      ],
+      "skills": [
+        {
+          "name": "SaaS"
+        },
+        {
+          "name": "Javascript"
+        }
+      ]
+    },
+    {
+      "role": "Cloud Solution / Development Architect",
+      "company": "SAP Labs Latin America",
+      "from": "08/2012",
+      "to": "04/2019",
+      "location": "São Leopoldo, Brazil",
+      "description": "In addition to its cloud products, SAP offers customization services through the Innovative Business Solutions organization.",
+      "activities": [
+        {
+          "description": "Traveled to New Zealand to join an escalated Sprint 0 as software architect."
+        },
+        {
+          "description": "Was temporarily relocated twice to Germany to work on strategic projects."
+        },
+        {
+          "description": "Worked as cloud solution tech lead on 15+ custom projects for customers across the globe."
+        },
+        {
+          "description": "Part of SAP Catalyst program for outstanding performers."
+        },
+        {
+          "description": "Got often pulled into challenging and problematic projects to help struggling teams to get up to speed."
+        }
+      ],
+      "skills": [
+        {
+          "name": "SaaS"
+        },
+        {
+          "name": "Javascript"
+        }
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "14 Awards for Professionalism and Teamwork",
+      "institution": "SAP Labs Latin America",
+      "location": "São Leopoldo, Brazil",
+      "date": "2021",
+      "description": "Throughout my history at SAP, I've been awarded multiple times by peers for my performance in delivering value to our customers."
+    },
+    {
+      "title": "First Place Innoweeks",
+      "institution": "SAP Labs Latin America",
+      "location": "São Leopoldo, Brazil",
+      "date": "2017",
+      "description": "In small development teams of around 5 members, we got assigned to closely work with customers in solving some of their biggest pain points. For our assigned customer who was a big player in the food industry, we developed a predictive maintenance app that would, among other things, analyze the data collected from sensors in their broiler and help predict temperature surges, which not only reduced the risk of fire but also decreased their insurance costs."
+    },
+    {
+      "title": "First Place at UFRGS Entrepreneurship Marathon (Flimbo)",
+      "institution": "UFRGS",
+      "location": "Porto Alegre, Brazil",
+      "date": "2016",
+      "description": "We won as the most innovative and most complete startup. Through out the competition we defined clear goals, commercialization plan and we were able to finish the initial MVP version of the application."
+    },
+    {
+      "title": "Products and Innovation Talent Award",
+      "institution": "SAP Labs Latin America",
+      "location": "São Leopoldo, Brazil",
+      "date": "2015",
+      "description": "I was nominated one of the talents of the year and I got invited to attend the P&I Talent Summit in San Francisco."
+    }
+  ],
+  "initiatives": [
+    {
+      "title": "Blockchain Unit",
+      "institution": "SAP Labs Latin America",
+      "location": "São Leopoldo, Brazil",
+      "date": "2017",
+      "description": "Was the lead of the Blockchain Unit, a group of studies to get deeper knowledge of the current state of the technology and to identify potential applications."
+    },
+    {
+      "title": "Team Calendar",
+      "institution": "SAP Labs Latin America",
+      "location": "São Leopoldo, Brazil",
+      "date": "2015",
+      "description": "I reused a custom Gantt Chart that we built for a customer to create a planning tool to help our team organize better our resources and for our management to have a way to easily visualize it."
+    },
+    {
+      "title": "Dev Sync Meetings",
+      "institution": "SAP Labs Latin America",
+      "location": "São Leopoldo, Brazil",
+      "date": "2014",
+      "description": "Started a recurring event where we talked about random technical topics. The idea was to share new technologies and techniques that we could use at work or on private projects."
+    }
+  ],
+  "education": [
+    {
+      "title": "Software Analysis and Development",
+      "institution": "Unisinos",
+      "from": "01/2010",
+      "to": "12/2017",
+      "level": "Superior",
+      "location": "São Leopoldo, Brazil"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Portuguese",
+      "proficiency": "Native"
+    },
+    {
+      "name": "English",
+      "proficiency": "Proficient"
+    },
+    {
+      "name": "German",
+      "proficiency": "Intermediate"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Motorcycles"
+    },
+    {
+      "name": "Crossfit"
+    },
+    {
+      "name": "Games"
+    },
+    {
+      "name": "Electronic Music"
+    }
+  ]
+}

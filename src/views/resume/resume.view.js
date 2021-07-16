@@ -162,7 +162,7 @@ const resumeView = Vue.component('resume-view', {
             return Math.round(this.getDocumentHeight() / this.getPrintPageHeightForThisDevice());
         },
         async loadResume() {
-            const request = await fetch('/data/json/resume-data.json');
+            const request = await fetch('/data/resume/frankra.json');
             const resume = await request.json();
 
             this.resume = resume;
