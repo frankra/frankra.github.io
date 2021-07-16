@@ -44,7 +44,7 @@ const template = `
             </div>
         </div>
 
-        <div class="section col-sm-6 float-end p-2">
+        <div class="section avoid-break-inside col-sm-6 float-end p-2">
             <div class="block" v-for="education in resume.education">
                 <div class="mb-2 title">
                     <span>EDUCATION</span>
@@ -55,7 +55,7 @@ const template = `
             </div>
         </div>
 
-        <div class="section col-sm-6 float-end p-2">
+        <div class="section avoid-break-inside col-sm-6 float-end p-2">
             <div class="block" v-for="language in resume.languages">
                 <div class="mb-2 title">
                     <span>LANGUAGES</span>
@@ -102,7 +102,7 @@ const APP_HEADER_HEIGHT_PX = 56;
 
 const BLOCK_TITLE_DIV_SELECTOR = '.block .title';
 
-const PAGE_HEADER_AREA_SCAN_HEIGHT_PX = 230; //shia_la_beouf_magic.gif
+const PAGE_HEADER_AREA_SCAN_HEIGHT_PX = 280; //shia_la_beouf_magic.gif
 
 const resumeView = Vue.component('resume-view', {
     template,
@@ -141,9 +141,7 @@ const resumeView = Vue.component('resume-view', {
             });
         },
         removeTitlesAddedForPrinting(event) {
-            this.getAllTitlesAfterPageBreak().forEach(title => {
-                title.style.display = 'none';
-            });
+            location.reload();
         },
         getMonitorPPI() {
             const elem = document.createElement('div');
