@@ -10,20 +10,20 @@
   "experiences": [
     {
       "role": "Senior Software Engineer",
-      "company": "SAP SE",
+      "company": "SAP SE (Business Process Intelligence)",
       "from": "03/2021",
       "to": "Present",
       "location": "Berlin, Germany",
-      "description": "Integrated Business Suite of No Code/Low Code applications powered by SAP Business Technology Platform.",
+      "description": "Integrated Business Suite that targets Citizen Developers, allowing non-developers to build their own processes, integrations and business applications.",
       "activities": [
         {
-          "description": "One of the leading members of the Core and Infrastructure team."
+          "description": "Main driver to integrate the separated applications using kafka as message broker."
         },
         {
           "description": "Responsible for the multitenancy enablement of the integrated suite."
         },
         {
-          "description": "Member of the security and compliance group."
+          "description": "Responsible for the initial compliance and security validation on the processes and deliverables."
         }
       ],
       "skills": [
@@ -31,18 +31,42 @@
           "name": "SaaS"
         },
         {
-          "name": "Javascript"
+          "name": "Typescript"
+        },
+        {
+          "name": "Java"
+        },
+        {
+          "name": "Cloud Foundry"
+        },
+        {
+          "name": "Kafka"
+        },
+        {
+          "name": "Terraform"
+        },
+        {
+          "name": "Product standards"
+        },
+        {
+          "name": "Security"
+        },
+        {
+          "name": "Docker"
         }
       ]
     },
     {
       "role": "Senior Software Engineer",
-      "company": "Ruum by SAP (SAP SE)",
+      "company": "SAP SE (Ruum by SAP)",
       "from": "04/2019",
       "to": "03/2021",
       "location": "Berlin, Germany",
-      "description": "Ruum is a Low Code/No Code application that allow users to easily model, run and monitor business processes.",
+      "description": "Ruum is a lightweight process and projects management tool. It allows users to map and execute simple business processes as well as define small projects and coordinate teams and timelines.",
       "activities": [
+        {
+          "description": "Worked on both Front end and back end as a fullstack engineer."
+        },
         {
           "description": "Designed and implemented the OData framework that serves both internal and public APIs."
         },
@@ -55,10 +79,40 @@
       ],
       "skills": [
         {
+          "name": "Typescript"
+        },
+        {
+          "name": "Angular"
+        },
+        {
+          "name": "Postgres"
+        },
+        {
+          "name": "k8s"
+        },
+        {
+          "name": "CQRS"
+        },
+        {
+          "name": "Event Sourcing"
+        },
+        {
+          "name": "Redux"
+        },
+        {
           "name": "SaaS"
         },
         {
-          "name": "Javascript"
+          "name": "AWS"
+        },
+        {
+          "name": "Sass"
+        },
+        {
+          "name": "Bootstrap"
+        },
+        {
+          "name": "Docker"
         }
       ]
     },
@@ -88,20 +142,41 @@
       ],
       "skills": [
         {
-          "name": "SaaS"
+          "name": "Javascript"
         },
         {
-          "name": "Javascript"
+          "name": "Postgres"
+        },
+        {
+          "name": "MongoDB"
+        },
+        {
+          "name": "AngularJS"
+        },
+        {
+          "name": "AWS"
+        },
+        {
+          "name": "Less"
+        },
+        {
+          "name": "Bootstrap"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "Saas"
         }
       ]
     },
     {
-      "role": "Cloud Solution / Development Architect",
-      "company": "SAP Labs Latin America",
+      "role": "Engineer/ Development Lead",
+      "company": "SAP SE (Cloud Custom Development)",
       "from": "08/2012",
       "to": "04/2019",
       "location": "São Leopoldo, Brazil",
-      "description": "In addition to its cloud products, SAP offers customization services through the Innovative Business Solutions organization.",
+      "description": "SAP custom development team focused on SAP cloud solutions.",
       "activities": [
         {
           "description": "Traveled to New Zealand to join an escalated Sprint 0 as software architect."
@@ -125,6 +200,42 @@
         },
         {
           "name": "Javascript"
+        },
+        {
+          "name": "Java"
+        },
+        {
+          "name": "Spring Boot"
+        },
+        {
+          "name": "HANA"
+        },
+        {
+          "name": "Cloud Foundry"
+        },
+        {
+          "name": "AngularJS"
+        },
+        {
+          "name": "Go"
+        },
+        {
+          "name": "Blockchain"
+        },
+        {
+          "name": "Less"
+        },
+        {
+          "name": "Sass"
+        },
+        {
+          "name": "Bootstrap"
+        },
+        {
+          "name": "PHP"
+        },
+        {
+          "name": "Docker"
         }
       ]
     }
@@ -132,14 +243,14 @@
   "awards": [
     {
       "title": "14 Awards for Professionalism and Teamwork",
-      "institution": "SAP Labs Latin America",
+      "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2021",
       "description": "Throughout my history at SAP, I've been awarded multiple times by peers for my performance in delivering value to our customers."
     },
     {
       "title": "First Place Innoweeks",
-      "institution": "SAP Labs Latin America",
+      "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2017",
       "description": "In small development teams of around 5 members, we got assigned to closely work with customers in solving some of their biggest pain points. For our assigned customer who was a big player in the food industry, we developed a predictive maintenance app that would, among other things, analyze the data collected from sensors in their broiler and help predict temperature surges, which not only reduced the risk of fire but also decreased their insurance costs."
@@ -153,7 +264,7 @@
     },
     {
       "title": "Products and Innovation Talent Award",
-      "institution": "SAP Labs Latin America",
+      "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2015",
       "description": "I was nominated one of the talents of the year and I got invited to attend the P&I Talent Summit in San Francisco."
@@ -162,21 +273,21 @@
   "initiatives": [
     {
       "title": "Blockchain Unit",
-      "institution": "SAP Labs Latin America",
+      "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2017",
       "description": "Was the lead of the Blockchain Unit, a group of studies to get deeper knowledge of the current state of the technology and to identify potential applications."
     },
     {
       "title": "Team Calendar",
-      "institution": "SAP Labs Latin America",
+      "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2015",
       "description": "I reused a custom Gantt Chart that we built for a customer to create a planning tool to help our team organize better our resources and for our management to have a way to easily visualize it."
     },
     {
       "title": "Dev Sync Meetings",
-      "institution": "SAP Labs Latin America",
+      "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2014",
       "description": "Started a recurring event where we talked about random technical topics. The idea was to share new technologies and techniques that we could use at work or on private projects."
@@ -218,6 +329,32 @@
     },
     {
       "name": "Electronic Music"
+    },
+    {
+      "name": "Programming"
+    },
+    {
+      "name": "Cyber Security"
+    },
+    {
+      "name": "Machine Learning"
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Effective Communication"
+    },
+    {
+      "name": "Empathy"
+    },
+    {
+      "name": "Teamwork"
+    },
+    {
+      "name": "Problem-solving"
+    },
+    {
+      "name": "Dependability"
     }
   ]
 }
