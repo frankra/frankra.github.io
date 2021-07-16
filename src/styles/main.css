@@ -117,6 +117,7 @@
 .cv .content .block {
     page-break-inside: avoid;
 }
+
 .cv .content .block .title span{
     display: none;
 } 

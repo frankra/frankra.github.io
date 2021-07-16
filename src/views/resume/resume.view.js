@@ -117,26 +117,24 @@ const resumeView = Vue.component('resume-view', {
         getAllTitles() {
             return [...document.querySelectorAll(BLOCK_TITLE_DIV_SELECTOR)];
         },
+        isTitleDivAfterPageBreak(titleDiv){
+            const pageHeightForThisDevice = this.getPrintPageHeightForThisDevice();
+            const boundingRect = titleDiv.getBoundingClientRect();
+            const elementCurrentY = boundingRect.y + window.pageYOffset;
+            const approxPageNumber = Math.round((elementCurrentY - document.firstChild.clientTop) / pageHeightForThisDevice);
+            const scanStart = (approxPageNumber * pageHeightForThisDevice) + APP_HEADER_HEIGHT_PX;
+            const scanEnd = scanStart + PAGE_HEADER_AREA_SCAN_HEIGHT_PX;
+            if (elementCurrentY >= scanStart && elementCurrentY <= scanEnd) {
+                return true;
+            } else {
+                return false;
+            }
+        },
         getAllTitlesAfterPageBreak() {
             return this.getAllTitles()
-                .filter(titleDiv => {
-                    const pageCount = this.getPrintPageCount();
-                    const pageHeightForThisDevice = this.getPrintPageHeightForThisDevice();
-                    const boundingRect = titleDiv.getBoundingClientRect();
-                    const elementCurrentY = boundingRect.y + window.pageYOffset;
-                    let scanStart;
-                    let scanEnd;
-                    for (let i = 1/*cause 1st page is already covered*/; i < pageCount; i++) {
-                        scanStart = (i * pageHeightForThisDevice) + APP_HEADER_HEIGHT_PX;
-                        scanEnd = scanStart + PAGE_HEADER_AREA_SCAN_HEIGHT_PX;
-                        if (elementCurrentY >= scanStart && elementCurrentY <= scanEnd){
-                            return true;
-                        }
-                    }
-                })
-                .map(titleDiv=> titleDiv.firstChild)
+                .filter(titleDiv => this.isTitleDivAfterPageBreak(titleDiv))
+                .map(titleDiv => titleDiv.firstChild);
         },
-
         addTitlesAfterPageBreakForPrinting(event) {
             this.getAllTitlesAfterPageBreak().forEach(title => {
                 title.style.display = 'block';
