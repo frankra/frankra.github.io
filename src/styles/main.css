@@ -10,6 +10,10 @@
     --title-font-size: 22px;
 }
 
+html {
+    font-family: Ubuntu;
+}
+
 .cv {
     font-weight: 400;
     font-style: normal;
