@@ -211,6 +211,9 @@
           "name": "HANA"
         },
         {
+          "name": "Postgres"
+        },
+        {
           "name": "Cloud Foundry"
         },
         {
@@ -236,6 +239,12 @@
         },
         {
           "name": "Docker"
+        },
+        {
+          "name": "D3.js"
+        },
+        {
+          "name": "sapUI5"
         }
       ]
     }
@@ -355,6 +364,9 @@
     },
     {
       "name": "Dependability"
+    },
+    {
+      "name": "Leadership"
     }
   ]
 }

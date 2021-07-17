@@ -5,6 +5,7 @@ import { resumeInitiativeItem } from './resume-initiative-item.component.js';
 import { resumeEducationItem } from './resume-education-item.component.js';
 import { resumeLanguageItem } from './resume-language-item.component.js';
 import { resumeInterestItem } from './resume-interest-item.component.js';
+import { resumeSoftSkillItem } from './resume-soft-skill-item.component.js';
 
 const template = `
 <div id="resume" class="cv container">
@@ -45,6 +46,20 @@ const template = `
         </div>
 
         <div class="section avoid-break-inside col-sm-6 float-end p-2">
+            <div class="block">
+                <div class="mb-2 title">
+                    <span>LANGUAGES</span>
+                </div>
+                <ul>
+                    <resume-language-item 
+                        v-for="language in resume.languages"
+                        v-bind:language="language">
+                    </resume-language-item>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section avoid-break-inside col-sm-6 float-end p-2">
             <div class="block" v-for="education in resume.education">
                 <div class="mb-2 title">
                     <span>EDUCATION</span>
@@ -55,17 +70,19 @@ const template = `
             </div>
         </div>
 
-        <div class="section avoid-break-inside col-sm-6 float-end p-2">
-            <div class="block" v-for="language in resume.languages">
+
+        <div class="section col-sm-6 float-end p-2">
+            <div class="block" >
                 <div class="mb-2 title">
-                    <span>LANGUAGES</span>
+                    <span>SOFT SKILLS</span>
                 </div>
-                <ul>
-                    <resume-language-item 
-                        v-bind:language="language">
-                    </resume-language-item>
-                </ul>
-            </div>
+                <div class="d-flex flex-wrap">
+                    <resume-soft-skill-item 
+                        v-for="softSkill in resume.softSkills"
+                        v-bind:softSkill="softSkill">
+                    </resume-soft-skill-item>
+                </div>
+            </div>    
         </div>
 
         <div class="section col-sm-6 float-end p-2">
@@ -89,20 +106,20 @@ const template = `
 //src: https://www.papersizes.org/a-sizes-in-pixels.htm
 const A4_PAGE_HEIGHT_MAP_PER_PPI = {
     // ppi : height in px
-    ppi_72: 595,
-    ppi_96: 794,
-    ppi_150: 1240,
-    ppi_300: 2480,
-    ppi_600: 4960,
-    ppi_720: 5953,
-    ppi_1200: 9921
+    ppi_72: 842,
+    ppi_96: 1123,
+    ppi_150: 1754,
+    ppi_300: 3508,
+    ppi_600: 7016,
+    ppi_720: 8419,
+    ppi_1200: 14032
 }
 
 const APP_HEADER_HEIGHT_PX = 56;
 
-const BLOCK_TITLE_DIV_SELECTOR = '.block .title';
-
-const PAGE_HEADER_AREA_SCAN_HEIGHT_PX = 280; //shia_la_beouf_magic.gif
+const BLOCK_DIV_SELECTOR = '.block';
+const BLOCK_TITLE_SPAN_SELECTOR = 'div.title span';
+const DEFAULT_PRINT_PAGE_WIDTH_PX = 794;
 
 const resumeView = Vue.component('resume-view', {
     template,
@@ -114,34 +131,52 @@ const resumeView = Vue.component('resume-view', {
         }
     },
     methods: {
-        getAllTitles() {
-            return [...document.querySelectorAll(BLOCK_TITLE_DIV_SELECTOR)];
+        getAllBlocks() {
+            return [...document.querySelectorAll(BLOCK_DIV_SELECTOR)];
         },
-        isTitleDivAfterPageBreak(titleDiv){
-            const pageHeightForThisDevice = this.getPrintPageHeightForThisDevice();
-            const boundingRect = titleDiv.getBoundingClientRect();
-            const elementCurrentY = boundingRect.y + window.pageYOffset;
-            const approxPageNumber = Math.round((elementCurrentY - document.firstChild.clientTop) / pageHeightForThisDevice);
-            const scanStart = (approxPageNumber * pageHeightForThisDevice) + APP_HEADER_HEIGHT_PX;
-            const scanEnd = scanStart + PAGE_HEADER_AREA_SCAN_HEIGHT_PX;
-            if (elementCurrentY >= scanStart && elementCurrentY <= scanEnd) {
+        /**
+         * Calculates if the block will move to the next printable page due to the css `page-brea-inside: avoid`
+         * rule.
+         */
+        willBlockGoToNextPage(block) {
+            const printablePageHeightForThisDevice = this.getPrintPageHeightForThisDevice();
+            const boundingRect = block.getBoundingClientRect();
+            const blockCurrentY = boundingRect.y + window.pageYOffset;
+            const blockCurrentHeight = boundingRect.height;
+            const blockStartsAtPage = Math.floor(blockCurrentY / printablePageHeightForThisDevice);
+            const blockEndsAtPage = Math.floor((blockCurrentY + blockCurrentHeight) / printablePageHeightForThisDevice);
+
+            if (blockStartsAtPage != blockEndsAtPage) {
                 return true;
             } else {
                 return false;
             }
         },
-        getAllTitlesAfterPageBreak() {
-            return this.getAllTitles()
-                .filter(titleDiv => this.isTitleDivAfterPageBreak(titleDiv))
-                .map(titleDiv => titleDiv.firstChild);
+        /**
+         * 
+         * @returns element[]
+         */
+        getAllBlocksAfterPageBreak() {
+            return this.getAllBlocks()
+                .filter(block => this.willBlockGoToNextPage(block));
         },
-        addTitlesAfterPageBreakForPrinting(event) {
-            this.getAllTitlesAfterPageBreak().forEach(title => {
-                title.style.display = 'block';
-            });
+        prepareForPrinting(event) {
+            this.defineCSSBeforePrinting();
+            this.getAllBlocksAfterPageBreak()
+                .forEach(block => {
+                    const title = block.querySelector(BLOCK_TITLE_SPAN_SELECTOR);
+                    title.style.display = 'block';
+                });
         },
-        removeTitlesAddedForPrinting(event) {
+        resetAfterPrinting(event) {
             location.reload();
+        },
+        defineCSSBeforePrinting() {
+            document.querySelector('html').style.width = `${DEFAULT_PRINT_PAGE_WIDTH_PX}`;
+            const resumeContainer = document.querySelector('div#resume.container');
+            resumeContainer.style.margin = '0px!important';
+            resumeContainer.style.padding = '0px!important';
+            resumeContainer.style['max-width'] = 'unset';
         },
         getMonitorPPI() {
             const elem = document.createElement('div');
@@ -152,7 +187,7 @@ const resumeView = Vue.component('resume-view', {
             return ppi;
         },
         getPrintPageHeightForThisDevice() {
-            return A4_PAGE_HEIGHT_MAP_PER_PPI[`ppi_${this.getMonitorPPI()}`];
+            return A4_PAGE_HEIGHT_MAP_PER_PPI[`ppi_${this.getMonitorPPI()}`] + APP_HEADER_HEIGHT_PX;
         },
         getDocumentHeight() {
             //get <HTML> height
@@ -169,14 +204,14 @@ const resumeView = Vue.component('resume-view', {
         }
     },
     created: async function () {
-        window.addEventListener('beforeprint', this.addTitlesAfterPageBreakForPrinting);
-        window.addEventListener('afterprint', this.removeTitlesAddedForPrinting);
+        window.addEventListener('beforeprint', this.prepareForPrinting);
+        window.addEventListener('afterprint', this.resetAfterPrinting);
 
         await this.loadResume();
     },
     destroyed() {
-        window.removeEventListener('beforeprint', this.addTitlesAfterPageBreakForPrinting);
-        window.removeEventListener('afterprint', this.removeTitlesAddedForPrinting);
+        window.removeEventListener('beforeprint', this.prepareForPrinting);
+        window.removeEventListener('afterprint', this.resetAfterPrinting);
     }
 });
 

@@ -54,6 +54,7 @@ experiences:
       - name: Typescript
       - name: Angular
       - name: Postgres
+      - name: Typeorm
       - name: k8s
       - name: CQRS
       - name: Event Sourcing
@@ -116,6 +117,7 @@ experiences:
       - name: Java
       - name: Spring Boot
       - name: HANA
+      - name: Postgres
       - name: Cloud Foundry
       - name: AngularJS
       - name: Go
@@ -125,6 +127,8 @@ experiences:
       - name: Bootstrap
       - name: PHP
       - name: Docker
+      - name: D3.js
+      - name: sapUI5
 awards:
   - title: 14 Awards for Professionalism and Teamwork
     institution: SAP SE
@@ -211,3 +215,4 @@ softSkills:
   - name: Teamwork
   - name: Problem-solving
   - name: Dependability
+  - name: Leadership
