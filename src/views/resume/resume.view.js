@@ -10,11 +10,12 @@ import { resumeSoftSkillItem } from './resume-soft-skill-item.component.js';
 const template = `
 <div id="resume" class="cv container">
     <resume-header v-bind:resume="resume"></resume-header>
+    <div id="overlay" class="print-overlay no-print"></div>
 
     <div class="content mb-4 mt-2 ms-3 me-3">
         <div class="section col-sm-6 float-start p-2">
             <div class="block" v-for="experience in resume.experiences">
-                <div class="mb-2 title">
+                <div class="title">
                     <span>WORK EXPERIENCE</span>
                 </div>
                 <resume-work-experience-item 
@@ -25,7 +26,7 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" v-for="award in resume.awards">
-                <div class="mb-2 title">
+                <div class="title">
                     <span>AWARDS</span>
                 </div>
                 <resume-award-item 
@@ -36,7 +37,7 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" v-for="initiative in resume.initiatives">
-                <div class="mb-2 title">
+                <div class="title">
                     <span>INITIATIVES</span>
                 </div>
                 <resume-initiative-item 
@@ -47,7 +48,7 @@ const template = `
 
         <div class="section avoid-break-inside col-sm-6 float-end p-2">
             <div class="block">
-                <div class="mb-2 title">
+                <div class="title">
                     <span>LANGUAGES</span>
                 </div>
                 <ul>
@@ -61,7 +62,7 @@ const template = `
 
         <div class="section avoid-break-inside col-sm-6 float-end p-2">
             <div class="block" v-for="education in resume.education">
-                <div class="mb-2 title">
+                <div class="title">
                     <span>EDUCATION</span>
                 </div>
                 <resume-education-item 
@@ -73,10 +74,10 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" >
-                <div class="mb-2 title">
+                <div class="title">
                     <span>SOFT SKILLS</span>
                 </div>
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap mt-2">
                     <resume-soft-skill-item 
                         v-for="softSkill in resume.softSkills"
                         v-bind:softSkill="softSkill">
@@ -87,10 +88,10 @@ const template = `
 
         <div class="section col-sm-6 float-end p-2">
             <div class="block" >
-                <div class="mb-2 title">
+                <div class="title">
                     <span>INTERESTS</span>
                 </div>
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap mt-2">
                     <resume-interest-item 
                         v-for="interest in resume.interests"
                         v-bind:interest="interest">
@@ -161,6 +162,7 @@ const resumeView = Vue.component('resume-view', {
                 .filter(block => this.willBlockGoToNextPage(block));
         },
         prepareForPrinting(event) {
+            this.showOverlay();
             this.defineCSSBeforePrinting();
             this.getAllBlocksAfterPageBreak()
                 .forEach(block => {
@@ -172,11 +174,15 @@ const resumeView = Vue.component('resume-view', {
             location.reload();
         },
         defineCSSBeforePrinting() {
+            //Mirror the same rules as in the @media print and @page css rules so that the JS calculation works
             document.querySelector('html').style.width = `${DEFAULT_PRINT_PAGE_WIDTH_PX}`;
             const resumeContainer = document.querySelector('div#resume.container');
             resumeContainer.style.margin = '0px!important';
             resumeContainer.style.padding = '0px!important';
             resumeContainer.style['max-width'] = 'unset';
+        },
+        showOverlay() {
+            document.querySelector('#overlay').style.display = 'block';
         },
         getMonitorPPI() {
             const elem = document.createElement('div');

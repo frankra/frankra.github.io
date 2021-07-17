@@ -51,11 +51,23 @@
 
 .cv ul {
     list-style: none;
+    margin-bottom: 0px;
 }
 
 .cv li {
     margin-left: -1em;
+    line-height: 18px;
     font-size: var(--secondary-font-size);
+}
+
+.cv .print-overlay{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
 }
 
 .cv li::before {
