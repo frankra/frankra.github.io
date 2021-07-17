@@ -12,7 +12,7 @@ const template = `
         </div>
         <div class="col-6 text-end title-secondary">{{experience.location}}</div>
     </div>
-    <div class="row text-secondary">
+    <div class="row text-secondary description">
         <span>{{experience.description}}</span>
     </div>
     <div class="row mt-2">

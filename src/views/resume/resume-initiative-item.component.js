@@ -4,7 +4,10 @@ const template = `
         <span>{{initiative.title}}</span>
     </div>
     <div class="row">
-        <span class="text-secondary">{{initiative.date}}, {{initiative.institution}}</span>
+        <div class="col-6">
+            <span class="title-secondary">{{initiative.date}} ({{initiative.institution}})</span>
+        </div>
+        <div class="col-6 text-end title-secondary">{{initiative.location}}</div>
     </div>
     <ul>
         <li>

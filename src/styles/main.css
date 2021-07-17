@@ -64,7 +64,7 @@ body {
     font-size: var(--secondary-font-size);
 }
 
-.cv .print-overlay{
+.cv .print-overlay {
     position: absolute;
     display: none;
     top: 0;
@@ -140,6 +140,10 @@ body {
 .cv .work-experience-item .company {
     font-size: var(--primary-font-size);
     line-height: 24px;
+}
+
+.cv .work-experience-item .description {
+    line-height: 18px;
 }
 
 .cv .content .block {

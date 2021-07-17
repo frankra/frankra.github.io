@@ -88,6 +88,9 @@
           "name": "Postgres"
         },
         {
+          "name": "Typeorm"
+        },
+        {
           "name": "k8s"
         },
         {
@@ -305,7 +308,7 @@
   "education": [
     {
       "title": "Software Analysis and Development",
-      "institution": "Unisinos",
+      "institution": "Universidade do Vale do Rio dos Sinos",
       "from": "01/2010",
       "to": "12/2017",
       "level": "Superior",
