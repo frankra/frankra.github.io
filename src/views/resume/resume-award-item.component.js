@@ -1,5 +1,5 @@
 const template = `
-<div class="award-item item">
+<div class="award-item item pb-2">
     <div class="row">
         <span class="fw-bolder">{{award.title}}</span>
     </div>

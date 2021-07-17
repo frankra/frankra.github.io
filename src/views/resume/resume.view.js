@@ -9,11 +9,11 @@ import { resumeSoftSkillItem } from './resume-soft-skill-item.component.js';
 
 const template = `
 <div id="resume" class="cv container">
-    <resume-header v-bind:resume="resume"></resume-header>
     <div id="overlay" class="print-overlay no-print"></div>
+    <resume-header v-bind:resume="resume"></resume-header>
 
-    <div class="content mb-4 mt-2 ms-3 me-3">
-        <div class="section col-sm-6 float-start p-2">
+    <div class="content pb-4 ps-3 pe-3">
+        <div class="section col-sm-6 float-start ps-2 pe-2 pb-2">
             <div class="block" v-for="experience in resume.experiences">
                 <div class="title">
                     <span>WORK EXPERIENCE</span>
@@ -24,7 +24,7 @@ const template = `
             </div>
         </div>
 
-        <div class="section col-sm-6 float-end p-2">
+        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
             <div class="block" v-for="award in resume.awards">
                 <div class="title">
                     <span>AWARDS</span>
@@ -35,7 +35,7 @@ const template = `
             </div>
         </div>
 
-        <div class="section col-sm-6 float-end p-2">
+        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
             <div class="block" v-for="initiative in resume.initiatives">
                 <div class="title">
                     <span>INITIATIVES</span>
@@ -46,7 +46,7 @@ const template = `
             </div>
         </div>
 
-        <div class="section avoid-break-inside col-sm-6 float-end p-2">
+        <div class="section avoid-break-inside col-sm-6 float-end ps-2 pe-2 pb-2">
             <div class="block">
                 <div class="title">
                     <span>LANGUAGES</span>
@@ -60,7 +60,7 @@ const template = `
             </div>
         </div>
 
-        <div class="section avoid-break-inside col-sm-6 float-end p-2">
+        <div class="section avoid-break-inside col-sm-6 float-end ps-2 pe-2 pb-2">
             <div class="block" v-for="education in resume.education">
                 <div class="title">
                     <span>EDUCATION</span>
@@ -72,12 +72,12 @@ const template = `
         </div>
 
 
-        <div class="section col-sm-6 float-end p-2">
+        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
             <div class="block" >
                 <div class="title">
                     <span>SOFT SKILLS</span>
                 </div>
-                <div class="d-flex flex-wrap mt-2">
+                <div class="d-flex flex-wrap pt-2">
                     <resume-soft-skill-item 
                         v-for="softSkill in resume.softSkills"
                         v-bind:softSkill="softSkill">
@@ -86,12 +86,12 @@ const template = `
             </div>    
         </div>
 
-        <div class="section col-sm-6 float-end p-2">
+        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
             <div class="block" >
                 <div class="title">
                     <span>INTERESTS</span>
                 </div>
-                <div class="d-flex flex-wrap mt-2">
+                <div class="d-flex flex-wrap pt-2">
                     <resume-interest-item 
                         v-for="interest in resume.interests"
                         v-bind:interest="interest">
@@ -121,6 +121,7 @@ const APP_HEADER_HEIGHT_PX = 56;
 const BLOCK_DIV_SELECTOR = '.block';
 const BLOCK_TITLE_SPAN_SELECTOR = 'div.title span';
 const DEFAULT_PRINT_PAGE_WIDTH_PX = 794;
+const FOOTER_APPROX_HEIGHT_PX = 30;
 
 const resumeView = Vue.component('resume-view', {
     template,
@@ -142,7 +143,7 @@ const resumeView = Vue.component('resume-view', {
         willBlockGoToNextPage(block) {
             const printablePageHeightForThisDevice = this.getPrintPageHeightForThisDevice();
             const boundingRect = block.getBoundingClientRect();
-            const blockCurrentY = boundingRect.y + window.pageYOffset;
+            const blockCurrentY = boundingRect.y + window.pageYOffset - APP_HEADER_HEIGHT_PX;
             const blockCurrentHeight = boundingRect.height;
             const blockStartsAtPage = Math.floor(blockCurrentY / printablePageHeightForThisDevice);
             const blockEndsAtPage = Math.floor((blockCurrentY + blockCurrentHeight) / printablePageHeightForThisDevice);
@@ -157,21 +158,22 @@ const resumeView = Vue.component('resume-view', {
          * 
          * @returns element[]
          */
-        getAllBlocksAfterPageBreak() {
-            return this.getAllBlocks()
-                .filter(block => this.willBlockGoToNextPage(block));
+        makeTitleVisibleOnBlocksShiftedToNextPage() {
+            return this.getAllBlocks().forEach(block => {
+                if (this.willBlockGoToNextPage(block)) {
+                    const title = block.querySelector(BLOCK_TITLE_SPAN_SELECTOR);
+                    title.style.display = 'block';
+                }
+            });
         },
         prepareForPrinting(event) {
             this.showOverlay();
+            this.addFootersForPrinting();
             this.defineCSSBeforePrinting();
-            this.getAllBlocksAfterPageBreak()
-                .forEach(block => {
-                    const title = block.querySelector(BLOCK_TITLE_SPAN_SELECTOR);
-                    title.style.display = 'block';
-                });
+            this.makeTitleVisibleOnBlocksShiftedToNextPage();
         },
         resetAfterPrinting(event) {
-            location.reload();
+            // location.reload();
         },
         defineCSSBeforePrinting() {
             //Mirror the same rules as in the @media print and @page css rules so that the JS calculation works
@@ -193,7 +195,7 @@ const resumeView = Vue.component('resume-view', {
             return ppi;
         },
         getPrintPageHeightForThisDevice() {
-            return A4_PAGE_HEIGHT_MAP_PER_PPI[`ppi_${this.getMonitorPPI()}`] + APP_HEADER_HEIGHT_PX;
+            return A4_PAGE_HEIGHT_MAP_PER_PPI[`ppi_${this.getMonitorPPI()}`];
         },
         getDocumentHeight() {
             //get <HTML> height
@@ -201,6 +203,24 @@ const resumeView = Vue.component('resume-view', {
         },
         getPrintPageCount() {
             return Math.round(this.getDocumentHeight() / this.getPrintPageHeightForThisDevice());
+        },
+        addFootersForPrinting() {
+            const pageCount = this.getPrintPageCount();
+            if (pageCount > 1) {
+                const resumeContainer = document.querySelector('div#resume.container');
+                for (let page = 1; page <= pageCount; page++) {
+                    const template = document.createElement('template');
+                    template.innerHTML = `
+                        <div class="print-footer">
+                            <span class="text-secondary">Page ${page} of ${pageCount}</span>
+                        </div>
+                    `.trim();
+                    const footerElement = template.content.firstChild;
+
+                    resumeContainer.append(footerElement);
+                    footerElement.style.top = `${(page * this.getPrintPageHeightForThisDevice()) - FOOTER_APPROX_HEIGHT_PX}px`;
+                }
+            }
         },
         async loadResume() {
             const request = await fetch('/data/resume/frankra.json');

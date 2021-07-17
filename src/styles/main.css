@@ -66,12 +66,20 @@ body {
 
 .cv .print-overlay {
     position: absolute;
+    z-index: 1;
     display: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     backdrop-filter: blur(10px);
+}
+
+.cv .print-footer {
+    page-break-inside: avoid;
+    position: absolute;
+    right: 20px;
+    z-index: 1;
 }
 
 .cv li::before {
@@ -117,17 +125,18 @@ body {
 }
 
 .cv .content .title {
+    padding-top: 18px;
     color: var(--primary-font-color);
     font-weight: 700;
     font-size: var(--title-font-size);
     text-decoration: underline;
 }
 
-.cv .p-2.section.float-start {
+.cv .section.float-start {
     padding-right: 1rem!important;
 }
 
-.cv .p-2.section.float-end {
+.cv .section.float-end {
     padding-left: 1rem!important;
 } 
 
@@ -181,13 +190,7 @@ footer {
     }
 }
 
-@page:first {
-    margin-top: 0;
-}
-
 @page {
     margin: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
     padding: 0;
 }

@@ -1,5 +1,5 @@
 const template = `
-<div class="work-experience-item item mb-2">
+<div class="work-experience-item item pb-2">
     <div class="row role">
         <span>{{experience.role}}</span>
     </div>
