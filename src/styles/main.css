@@ -10,8 +10,8 @@
     --title-font-size: 22px;
 }
 
-html {
-    font-family: 'Ubuntu';
+body {
+    font-family: Ubuntu, "times new roman", times, roman, serif;
 }
 
 .cv {
