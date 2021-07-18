@@ -173,7 +173,7 @@ const resumeView = Vue.component('resume-view', {
             this.makeTitleVisibleOnBlocksShiftedToNextPage();
         },
         resetAfterPrinting(event) {
-            // location.reload();
+            location.reload();
         },
         defineCSSBeforePrinting() {
             //Mirror the same rules as in the @media print and @page css rules so that the JS calculation works
