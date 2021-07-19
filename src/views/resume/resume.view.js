@@ -140,7 +140,7 @@ const resumeView = Vue.component('resume-view', {
          * Calculates if the block will move to the next printable page due to the css `page-brea-inside: avoid`
          * rule.
          */
-        willBlockGoToNextPage(block) {
+        willBlockBreakIntoNextPage(block) {
             const printablePageHeightForThisDevice = this.getPrintPageHeightForThisDevice();
             const boundingRect = block.getBoundingClientRect();
             const blockCurrentY = boundingRect.y + window.pageYOffset - APP_HEADER_HEIGHT_PX;
@@ -160,7 +160,7 @@ const resumeView = Vue.component('resume-view', {
          */
         makeTitleVisibleOnBlocksShiftedToNextPage() {
             return this.getAllBlocks().forEach(block => {
-                if (this.willBlockGoToNextPage(block)) {
+                if (this.willBlockBreakIntoNextPage(block)) {
                     const title = block.querySelector(BLOCK_TITLE_SPAN_SELECTOR);
                     title.style.display = 'block';
                 }

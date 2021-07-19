@@ -14,16 +14,13 @@
       "from": "03/2021",
       "to": "Present",
       "location": "Berlin, Germany",
-      "description": "Integrated Business Suite that targets Citizen Developers, allowing non-developers to build their own processes, integrations and business applications.",
+      "description": "SAP's Integrated Business Suite of different applications that allows non-developers to design, run and monitor custom business processes.",
       "activities": [
         {
-          "description": "Main driver to integrate the separated applications using kafka as message broker."
+          "description": "Started the infrastructure as code initiative in the team, where using mainly terraform, we were able to automate and substantially improve the provisioning and maintenance of our landscapes."
         },
         {
-          "description": "Responsible for the multitenancy enablement of the integrated suite."
-        },
-        {
-          "description": "Responsible for the initial compliance and security validation on the processes and deliverables."
+          "description": "Worked on the multitenancy enablement of the integrated suite which handled the onboarding and offboarding of new tenants and kafka topics. Also worked on the strategy to notify kafka listeners to subscribe to newly created topics, regardless of the amount of listener replicas."
         }
       ],
       "skills": [
@@ -44,15 +41,6 @@
         },
         {
           "name": "Terraform"
-        },
-        {
-          "name": "Product standards"
-        },
-        {
-          "name": "Security"
-        },
-        {
-          "name": "Docker"
         }
       ]
     },
@@ -62,19 +50,22 @@
       "from": "04/2019",
       "to": "03/2021",
       "location": "Berlin, Germany",
-      "description": "Ruum is a lightweight process and projects management tool. It allows users to map and execute simple business processes as well as define small projects and coordinate teams and timelines.",
+      "description": "Ruum is a lightweight process and projects management tool which allows users to map and execute simple business processes as well as define small projects and coordinate teams and timelines.",
       "activities": [
         {
-          "description": "Worked on both Front end and back end as a fullstack engineer."
+          "description": "Contributed to both frontend and backend development. This helped the team to be more agile as I could easily switch contexts and also helped to refine the API designs for a better development experience on the frontend."
         },
         {
-          "description": "Designed and implemented the OData framework that serves both internal and public APIs."
+          "description": "Implemented the OData framework to speed up and optimize the development of new public and internal APIs. To add new entities, developers would only need to annotate existing TypeORM entites with the OData Framework annotations, then the rest would be handled automatically, including filtering, pagination, navigation and metadata generation."
         },
         {
-          "description": "Designed and implemented the web hooks system."
+          "description": "Worked on the peformance optimization of the OData framework queries, leveraging Postgres Lateral Joins for pagination on entities with expanded properties, substantially improving the API performance without limiting its functionality."
         },
         {
-          "description": "Main responsible contact for technically supporting customers regarding integration topics."
+          "description": "Performed load tests on the API framework and system infrastructure to measure the performance impact and resilience. Also implemented the request rate limitation policy to protect the infrastructure against DDoS attacks."
+        },
+        {
+          "description": "Implemented the webhooks system allowing integration developers to register their applications, track and debug the webhook events and re-send failed events. This improved a lot the experience of integration developers."
         }
       ],
       "skills": [
@@ -128,19 +119,16 @@
       "description": "Online vectorial editor, focused on creating, maintaining and sharing marketing content on online social networks.",
       "activities": [
         {
-          "description": "Main driver of the project, who had the idea and assembled the initial team of founders."
+          "description": "Assembled and mobilized the initial team of co-founders to develop the idea, roadmap and kick start the development of our project."
         },
         {
-          "description": "Defined the commercialization model and the roadmap."
+          "description": "Helped to define and implement the commercialization model so we could make the operation of the system viable from the financial perspective."
         },
         {
-          "description": "Designed and developed 90%+ of the backend stack and infrastructure."
+          "description": "Started the initial development of the backend using MongoDB. Later after re-evaluating the backlog, and by observing that our data access was requiring transactionality across multiple documents, I redesigned refactored and migrated it to use Postgres instead."
         },
         {
-          "description": "Implemented the Paywall framework and integration with Stripe."
-        },
-        {
-          "description": "Integrated the application with the major social media networks, which allow paying customers to share designs directly out of the platform."
+          "description": "While pivoting our business to attract more users to try our art editor, I integrated the application with the major social media networks, which allowed paying customers to share designs directly out of the platform instead of having to download and upload the PNG files manually."
         }
       ],
       "skills": [
@@ -151,7 +139,13 @@
           "name": "Postgres"
         },
         {
+          "name": "Sequelize"
+        },
+        {
           "name": "MongoDB"
+        },
+        {
+          "name": "Mongoose"
         },
         {
           "name": "AngularJS"
@@ -364,9 +358,6 @@
     },
     {
       "name": "Problem-solving"
-    },
-    {
-      "name": "Dependability"
     },
     {
       "name": "Leadership"
