@@ -88,8 +88,8 @@ experiences:
       - description: Invited over to Germany to work as frontend developer on two strategic projects.
       - description: Technically led small teams of developers to deliver 5 custom extensions on SAP SuccessFactors (HR Module)
       - description: Designed, Developed and Delivered 20+ small custom extensions on SAP Cloud ERP across most modules.
-      - description: Worked closely with customers and other organizations to designing solutions and estimate project costs.
-      - description: Participated in 10+ co-innovation initiatives which were later converted in full fledged projects.
+      - description: Worked closely with customers and other organizations to design solutions and estimate project costs.
+      - description: Participated in 10+ co-innovation initiatives which were later converted in projects.
       - description: Part of SAP Catalyst program for outstanding performers.
     skills:
       - name: SaaS
@@ -141,7 +141,7 @@ initiatives:
     institution: SAP SE
     location: São Leopoldo, Brazil
     date: "2014"
-    description: Recurring event that invited peers to discuss and present new technologies in a very informal and friendly way. (A la Google TGIF)
+    description: Recurring event that invited peers to discuss and present new technologies in a very informal and friendly way.
 education:
   - title: Software Analysis and Development
     institution: Universidade do Vale do Rio dos Sinos
