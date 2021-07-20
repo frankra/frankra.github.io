@@ -7,6 +7,7 @@
   "location": "Berlin, Germany",
   "githubUrl": "https://github.com/frankra",
   "linkedinUrl": "https://linkedin.com/in/frankra",
+  "webUrl": "https://frankra.github.io",
   "experiences": [
     {
       "role": "Senior Software Engineer",
@@ -14,13 +15,16 @@
       "from": "03/2021",
       "to": "Present",
       "location": "Berlin, Germany",
-      "description": "SAP's Integrated Business Suite of different applications that allows non-developers to design, run and monitor custom business processes.",
+      "description": "Integrated Business Suite of applications that allows non-developers to design, run and monitor custom business processes.",
       "activities": [
         {
-          "description": "Started the infrastructure as code initiative in the team, where using mainly terraform, we were able to automate and substantially improve the provisioning and maintenance of our landscapes."
+          "description": "Applied infrastructure as code using Terraform to automate and improve landscape management."
         },
         {
-          "description": "Worked on the multitenancy enablement of the integrated suite which handled the onboarding and offboarding of new tenants and kafka topics. Also worked on the strategy to notify kafka listeners to subscribe to newly created topics, regardless of the amount of listener replicas."
+          "description": "Setup the multitenancy across the underlying services reusing the standards provided by the platform."
+        },
+        {
+          "description": "Defined the Kafka topic onboarding/offboarding strategy accross the multiple service replicas focusing on overall solution resilience."
         }
       ],
       "skills": [
@@ -50,30 +54,24 @@
       "from": "04/2019",
       "to": "03/2021",
       "location": "Berlin, Germany",
-      "description": "Ruum is a lightweight process and projects management tool which allows users to map and execute simple business processes as well as define small projects and coordinate teams and timelines.",
+      "description": "Lightweight and flexible project management tool with simple process modelling and execution features.",
       "activities": [
         {
-          "description": "Contributed to both frontend and backend development. This helped the team to be more agile as I could easily switch contexts and also helped to refine the API designs for a better development experience on the frontend."
+          "description": "Contributed to both frontend and backend development tasks increasing team throughput."
         },
         {
-          "description": "Implemented the OData framework to speed up and optimize the development of new public and internal APIs. To add new entities, developers would only need to annotate existing TypeORM entites with the OData Framework annotations, then the rest would be handled automatically, including filtering, pagination, navigation and metadata generation."
+          "description": "Designed and implemented an end-to-end annotation-based OData API framework in NodeJS that increased developer productivity through automated pagination, filter and API generation."
         },
         {
-          "description": "Worked on the peformance optimization of the OData framework queries, leveraging Postgres Lateral Joins for pagination on entities with expanded properties, substantially improving the API performance without limiting its functionality."
+          "description": "Optimized SQL queries increasing overall API performance."
         },
         {
-          "description": "Performed load tests on the API framework and system infrastructure to measure the performance impact and resilience. Also implemented the request rate limitation policy to protect the infrastructure against DDoS attacks."
-        },
-        {
-          "description": "Implemented the webhooks system allowing integration developers to register their applications, track and debug the webhook events and re-send failed events. This improved a lot the experience of integration developers."
+          "description": "Developed the webhooks system allowing developers to configure and maintain integrations conveniently."
         }
       ],
       "skills": [
         {
           "name": "Typescript"
-        },
-        {
-          "name": "Angular"
         },
         {
           "name": "Postgres"
@@ -94,13 +92,13 @@
           "name": "Redux"
         },
         {
+          "name": "Angular"
+        },
+        {
           "name": "SaaS"
         },
         {
           "name": "AWS"
-        },
-        {
-          "name": "Sass"
         },
         {
           "name": "Bootstrap"
@@ -119,16 +117,19 @@
       "description": "Online vectorial editor, focused on creating, maintaining and sharing marketing content on online social networks.",
       "activities": [
         {
-          "description": "Assembled and mobilized the initial team of co-founders to develop the idea, roadmap and kick start the development of our project."
+          "description": "Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap and kick start the development of our startup."
         },
         {
-          "description": "Helped to define and implement the commercialization model so we could make the operation of the system viable from the financial perspective."
+          "description": "Defined and implemented commercial model to cover our operational expenses."
         },
         {
-          "description": "Started the initial development of the backend using MongoDB. Later after re-evaluating the backlog, and by observing that our data access was requiring transactionality across multiple documents, I redesigned refactored and migrated it to use Postgres instead."
+          "description": "Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres."
         },
         {
-          "description": "While pivoting our business to attract more users to try our art editor, I integrated the application with the major social media networks, which allowed paying customers to share designs directly out of the platform instead of having to download and upload the PNG files manually."
+          "description": "Contributed to the frontend in developing reusable components and a library to easily consume the backend APIs."
+        },
+        {
+          "description": "Integrated the application with major social networks, allowing paying users to post marketing content directly from the application."
         }
       ],
       "skills": [
@@ -176,19 +177,25 @@
       "description": "SAP custom development team focused on SAP cloud solutions.",
       "activities": [
         {
-          "description": "Traveled to New Zealand to join an escalated Sprint 0 as software architect."
+          "description": "Invited over to New Zealand to join a sprint zero workshop as solution architect."
         },
         {
-          "description": "Was temporarily relocated twice to Germany to work on strategic projects."
+          "description": "Invited over to Germany to work as frontend developer on two strategic projects."
         },
         {
-          "description": "Worked as cloud solution tech lead on 15+ custom projects for customers across the globe."
+          "description": "Technically led small teams of developers to deliver 5 custom extensions on SAP SuccessFactors (HR Module)"
+        },
+        {
+          "description": "Designed, Developed and Delivered 20+ small custom extensions on SAP Cloud ERP across most modules."
+        },
+        {
+          "description": "Worked closely with customers and other organizations to designing solutions and estimate project costs."
+        },
+        {
+          "description": "Participated in 10+ co-innovation initiatives which were later converted in full fledged projects."
         },
         {
           "description": "Part of SAP Catalyst program for outstanding performers."
-        },
-        {
-          "description": "Got often pulled into challenging and problematic projects to help struggling teams to get up to speed."
         }
       ],
       "skills": [
@@ -217,18 +224,6 @@
           "name": "AngularJS"
         },
         {
-          "name": "Go"
-        },
-        {
-          "name": "Blockchain"
-        },
-        {
-          "name": "Less"
-        },
-        {
-          "name": "Sass"
-        },
-        {
           "name": "Bootstrap"
         },
         {
@@ -252,28 +247,28 @@
       "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2021",
-      "description": "Throughout my history at SAP, I've been awarded multiple times by peers for my performance in delivering value to our customers."
+      "description": "I've been awarded multiple times by peers for my performance in delivering value to our customers."
     },
     {
       "title": "First Place Innoweeks",
       "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2017",
-      "description": "In small development teams of around 5 members, we got assigned to closely work with customers in solving some of their biggest pain points. For our assigned customer who was a big player in the food industry, we developed a predictive maintenance app that would, among other things, analyze the data collected from sensors in their broiler and help predict temperature surges, which not only reduced the risk of fire but also decreased their insurance costs."
+      "description": "Developed the foundation of the user inteface with SAP UI5 and real time data charts using D3.js, focusing on performance, smooth rendering and intuitive user experience."
     },
     {
       "title": "First Place at UFRGS Entrepreneurship Marathon (Flimbo)",
       "institution": "UFRGS",
       "location": "Porto Alegre, Brazil",
       "date": "2016",
-      "description": "We won as the most innovative and most complete startup. Through out the competition we defined clear goals, commercialization plan and we were able to finish the initial MVP version of the application."
+      "description": "Flimbo won as the most innovative and overall most mature startup on the event."
     },
     {
       "title": "Products and Innovation Talent Award",
       "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2015",
-      "description": "I was nominated one of the talents of the year and I got invited to attend the P&I Talent Summit in San Francisco."
+      "description": "I was nominated one of the talents of the year among the worldwide organization."
     }
   ],
   "initiatives": [
@@ -282,21 +277,21 @@
       "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2017",
-      "description": "Was the lead of the Blockchain Unit, a group of studies to get deeper knowledge of the current state of the technology and to identify potential applications."
+      "description": "Lead a Blockchain studies group to get deeper knowledge of the current state of the technology and to identify potential applications in our customer projects."
     },
     {
       "title": "Team Calendar",
       "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2015",
-      "description": "I reused a custom Gantt Chart that we built for a customer to create a planning tool to help our team organize better our resources and for our management to have a way to easily visualize it."
+      "description": "Reused a custom Gantt Chart component from a previous project and built a visual planning tool to help with workload visualization and distribution on our team."
     },
     {
       "title": "Dev Sync Meetings",
       "institution": "SAP SE",
       "location": "São Leopoldo, Brazil",
       "date": "2014",
-      "description": "Started a recurring event where we talked about random technical topics. The idea was to share new technologies and techniques that we could use at work or on private projects."
+      "description": "Recurring event that invited peers to discuss and present new technologies in a very informal and friendly way. (A la Google TGIF)"
     }
   ],
   "education": [

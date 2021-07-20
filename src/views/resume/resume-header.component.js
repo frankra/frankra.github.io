@@ -12,7 +12,7 @@ const template = `
         </div>
     </div>
  
-    <div class="ps-4 pe-4 pt-2 pb-2 sub-header">
+    <div class="ps-4 pe-4 pt-2 pb-2 mb-2 sub-header">
         <div class="row mb-2">
             <div class="col-6">
                 <i class="me-2 bi bi-envelope"></i>
@@ -37,6 +37,10 @@ const template = `
             <div class="col-6">
                 <i class="me-2 bi bi-github"></i>
                 <a v-bind:href="resume.githubUrl">{{this.removeHttpsFromUrl(resume.githubUrl)}}</a>
+            </div>
+            <div class="col-6">
+                <i class="me-2 bi bi-globe"></i>
+                <a v-bind:href="resume.webUrl">{{this.removeHttpsFromUrl(resume.webUrl)}}</a>
             </div>
         </div>
     </div>

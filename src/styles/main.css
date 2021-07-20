@@ -2,12 +2,12 @@
     --header-font-color: #ffffff;
     --content-font-color: #000000;
     --primary-font-color: #449399;
-    --primary-font-size: 18px;
+    --primary-font-size: 16px;
     --secondary-font-color: #449399;
-    --secondary-font-size: 14px;
-    --smaller-font-size: 12px;
-    --header-font-size: 36px;
-    --title-font-size: 22px;
+    --secondary-font-size: 12px;
+    --smaller-font-size: 10px;
+    --header-font-size: 32px;
+    --title-font-size: 20px;
 }
 
 body {
@@ -108,11 +108,12 @@ body {
 }
 
 .cv .header .description {
-    font-size: var(--primary-secondary-size);
+    font-size: var(--secondary-font-size);
 }
 
 .cv .sub-header {
     background-color: #222a33;
+    font-size: var(--secondary-font-size);
 }
 
 .cv .sub-header a {
@@ -124,7 +125,7 @@ body {
     color: var(--content-font-color);
 }
 
-.cv .content .title {
+.cv .content .title span{
     padding-top: 18px;
     color: var(--primary-font-color);
     font-weight: 700;
