@@ -13,15 +13,15 @@ linkedinUrl: https://linkedin.com/in/frankra
 webUrl: https://frankra.github.io
 experiences:
   - role: Senior Software Engineer
-    company: SAP SE (Business Process Intelligence)
+    company: SAP (Business Process Intelligence)
     from: 03/2021
     to: Present
     location: Berlin, Germany
     description: Integrated Business Suite of applications that allows non-developers to design, run and monitor custom business processes.
     activities:
       - description: Applied infrastructure as code using Terraform to automate and improve landscape management.
-      - description: Setup the multitenancy across the underlying services reusing the standards provided by the platform.
-      - description: Defined the Kafka topic onboarding/offboarding strategy accross the multiple service replicas focusing on overall solution resilience.
+      - description: Setup the integrated multitenancy strategy reusing the framework provided by the platform.
+      - description: Defined the Kafka topic management strategy for the tenant aware services.
     skills:
       - name: SaaS
       - name: Typescript
@@ -30,13 +30,13 @@ experiences:
       - name: Kafka
       - name: Terraform
   - role: Senior Software Engineer
-    company: SAP SE (Ruum by SAP)
+    company: SAP (Ruum by SAP)
     from: 04/2019
     to: 03/2021
     location: Berlin, Germany
     description: Lightweight and flexible project management tool with simple process modelling and execution features.
     activities:
-      - description: Contributed to both frontend and backend development tasks increasing team throughput.
+      - description: Contributed to both frontend and backend development increasing team throughput.
       - description: Designed and implemented an end-to-end annotation-based OData API framework in NodeJS that increased developer productivity through automated pagination, filter and API generation.
       - description: Optimized SQL queries increasing overall API performance.
       - description: Developed the webhooks system allowing developers to configure and maintain integrations conveniently.
@@ -63,8 +63,8 @@ experiences:
       - description: Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap and kick start the development of our startup.
       - description: Defined and implemented commercial model to cover our operational expenses.
       - description: Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres.
-      - description: Contributed to the frontend in developing reusable components and a library to easily consume the backend APIs.
-      - description: Integrated the application with major social networks, allowing paying users to post marketing content directly from the application.
+      - description: Contributed to the frontend by developing reusable components and a library to easily authenticate and consume the backend APIs.
+      - description: Integrated the application with major social networks, allowing paying users to post content seamlessly.
     skills:
       - name: Javascript
       - name: Postgres
@@ -78,16 +78,16 @@ experiences:
       - name: Docker
       - name: Saas
   - role: Engineer/ Development Lead
-    company: SAP SE (Cloud Custom Development)
+    company: SAP (Cloud Custom Development)
     from: "08/2012"
     to: 04/2019
     location: São Leopoldo, Brazil
-    description: SAP custom development team focused on SAP cloud solutions.
+    description: Custom development team focused building new cloud applications and extending SAP cloud solutions.
     activities:
       - description: Invited over to New Zealand to join a sprint zero workshop as solution architect. 
       - description: Invited over to Germany to work as frontend developer on two strategic projects.
-      - description: Technically led small teams of developers to deliver 5 custom extensions on SAP SuccessFactors (HR Module)
-      - description: Designed, Developed and Delivered 20+ small custom extensions on SAP Cloud ERP across most modules.
+      - description: Technically led small teams of developers to deliver 5 custom extensions for SAP SuccessFactors (HR Module)
+      - description: Designed, developed and delivered 20+ smaller custom extensions on a variety of SAP Cloud ERP modules.
       - description: Worked closely with customers and other organizations to design solutions and estimate project costs.
       - description: Participated in 10+ co-innovation initiatives which were later converted in gprojects.
       - description: Part of SAP Catalyst program for outstanding performers.
@@ -107,38 +107,33 @@ experiences:
       - name: sapUI5
 awards:
   - title: 14 Awards for Professionalism and Teamwork
-    institution: SAP SE
+    institution: SAP
     location: São Leopoldo, Brazil
-    date: "2021"
+    date: "Present"
     description: I've been awarded multiple times by peers for my performance in delivering value to our customers.
-  - title: First Place Innoweeks
-    institution: SAP SE
-    location: São Leopoldo, Brazil
-    date: "2017"
-    description: Developed the foundation of the user inteface with SAP UI5 and real time data charts using D3.js, focusing on performance, smooth rendering and intuitive user experience.
   - title: First Place at UFRGS Entrepreneurship Marathon (Flimbo)
     institution: UFRGS
     location: Porto Alegre, Brazil
     date: "2016"
     description: Flimbo won as the most innovative and overall most mature startup on the event.
   - title: Products and Innovation Talent Award
-    institution: SAP SE
+    institution: SAP
     location: São Leopoldo, Brazil
     date: "2015"
     description: I was nominated one of the talents of the year among the worldwide organization.
 initiatives:
   - title: Blockchain Unit
-    institution: SAP SE
+    institution: SAP
     location: São Leopoldo, Brazil
     date: "2017"
-    description: Led a Blockchain studies group to identify potential applications in our customer projects.
+    description: Led a blockchain studies group to identify potential applications in our customer projects.
   - title: Team Calendar
-    institution: SAP SE
+    institution: SAP
     location: São Leopoldo, Brazil
     date: "2015"
-    description: Reused a custom Gantt Chart component from a previous project and built a visual planning tool to help with workload visualization and distribution on our team.
+    description: Reused a custom Gantt chart component from a previous project and built a planning tool to provide workload visualization and distribution to our team.
   - title: Dev Sync Meetings
-    institution: SAP SE
+    institution: SAP
     location: São Leopoldo, Brazil
     date: "2014"
     description: Recurring event that invited peers to discuss and present new technologies in a very informal and friendly way.

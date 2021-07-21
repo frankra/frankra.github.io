@@ -1,6 +1,7 @@
 const template = `
 <div>
     <div class="p-4 header d-block position-relative">
+        <img src="https://avatars.githubusercontent.com/u/5017439?v=4" class="avatar float-end"/>
         <div class="row name">
             <span>{{resume.name}}</span>
         </div>

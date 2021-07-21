@@ -168,8 +168,8 @@ const resumeView = Vue.component('resume-view', {
         },
         prepareForPrinting(event) {
             this.showOverlay();
-            this.addFootersForPrinting();
             this.defineCSSBeforePrinting();
+            this.addFootersForPrinting();
             this.makeTitleVisibleOnBlocksShiftedToNextPage();
         },
         resetAfterPrinting(event) {

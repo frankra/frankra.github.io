@@ -95,6 +95,7 @@ body {
 
 .cv .header {
     background-color: #313c4e;
+    min-height: 170px;
 }
 
 .cv .header .name {
@@ -109,6 +110,12 @@ body {
 
 .cv .header .description {
     font-size: var(--secondary-font-size);
+}
+
+.cv .header .avatar {
+    width: 125px;
+    border: 5px solid var(--primary-font-color);
+    border-radius: 50%;
 }
 
 .cv .sub-header {
