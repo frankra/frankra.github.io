@@ -1,48 +1,40 @@
 const template = `
-<div>
-    <div class="p-4 header d-block position-relative">
-        <img src="https://avatars.githubusercontent.com/u/5017439?v=4" class="avatar float-end"/>
-        <div class="row name">
+<div class="header row mb-3">
+    <div class="p-4 col-sm-5">
+        <div class="name">
             <span>{{resume.name}}</span>
         </div>
-        <div class="row role">
+        <div class="role">
             <span>{{resume.role}}</span>
         </div>
-        <div class="row mt-3 description">
+        <div class="mt-3 header-secondary-text">
             <span>{{resume.description}}</span>
         </div>
     </div>
- 
-    <div class="ps-4 pe-4 pt-2 pb-2 mb-2 sub-header">
-        <div class="row mb-2">
-            <div class="col-6">
-                <i class="me-2 bi bi-envelope"></i>
-                <a v-bind:href="'mailto:' + resume.email">{{resume.email}}</a>
-            </div>
-            <div class="col-6">
-                <i class="me-2 bi bi-phone"></i>
-                {{resume.phone}}
-            </div>
+    <div class="col-sm-2 avatar-container">
+        <img src="https://avatars.githubusercontent.com/u/5017439?v=4" class="avatar"/>
+    </div>
+
+    <div class="p-4 col-sm-5 text-end header-secondary-text">
+        <div>
+            <a v-bind:href="'mailto:' + resume.email">{{resume.email}}</a>
+            <i class="ms-2 bi bi-envelope"></i>
         </div>
-        <div class="row mb-2">
-            <div class="col-6">
-                <i class="me-2 bi bi-pin-map"></i>
-                {{resume.location}}
-            </div>
-            <div class="col-6">
-                <i class="me-2 bi bi-linkedin"></i>
-                <a v-bind:href="resume.linkedinUrl">{{this.removeHttpsFromUrl(resume.linkedinUrl)}}</a>
-            </div>
+        <div>
+            {{resume.phone}}
+            <i class="ms-2 bi bi-phone"></i>
         </div>
-        <div class="row mb-2">
-            <div class="col-6">
-                <i class="me-2 bi bi-github"></i>
-                <a v-bind:href="resume.githubUrl">{{this.removeHttpsFromUrl(resume.githubUrl)}}</a>
-            </div>
-            <div class="col-6">
-                <i class="me-2 bi bi-globe"></i>
-                <a v-bind:href="resume.webUrl">{{this.removeHttpsFromUrl(resume.webUrl)}}</a>
-            </div>
+        <div>
+            {{resume.location}}
+            <i class="ms-2 bi bi-pin-map"></i>
+        </div>
+        <div>
+            <a v-bind:href="resume.linkedinUrl">{{this.removeHttpsFromUrl(resume.linkedinUrl)}}</a>
+            <i class="ms-2 bi bi-linkedin"></i>
+        </div>
+        <div>
+            <a v-bind:href="resume.webUrl">{{this.removeHttpsFromUrl(resume.webUrl)}}</a>
+            <i class="ms-2 bi bi-globe"></i>
         </div>
     </div>
 </div>

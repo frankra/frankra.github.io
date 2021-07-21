@@ -85,7 +85,7 @@ body {
 .cv li::before {
     content: "\2022";
     font-weight: bold;
-    display: inline-block; 
+    display: inline-block;
     width: 1em;
     margin-left: -1em;
     text-align: center;
@@ -95,7 +95,9 @@ body {
 
 .cv .header {
     background-color: #313c4e;
-    min-height: 170px;
+    min-height: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .cv .header .name {
@@ -108,31 +110,35 @@ body {
     font-size: var(--primary-font-size);
 }
 
-.cv .header .description {
+.cv .header .header-secondary-text {
     font-size: var(--secondary-font-size);
+}
+
+.cv .header .header-secondary-text a {
+    text-decoration: none;
+    color: var(--header-font-color)
+}
+
+.cv .avatar-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .cv .header .avatar {
-    width: 125px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 140px;
     border: 5px solid var(--primary-font-color);
     border-radius: 50%;
-}
-
-.cv .sub-header {
-    background-color: #222a33;
-    font-size: var(--secondary-font-size);
-}
-
-.cv .sub-header a {
-    color: var(--header-font-color);
-    text-decoration: none;
 }
 
 .cv .content {
     color: var(--content-font-color);
 }
 
-.cv .content .title span{
+.cv .content .title span {
     padding-top: 18px;
     color: var(--primary-font-color);
     font-weight: 700;
@@ -146,7 +152,7 @@ body {
 
 .cv .section.float-end {
     padding-left: 1rem!important;
-} 
+}
 
 .cv .work-experience-item .role {
     font-size: var(--primary-font-size);
@@ -171,17 +177,18 @@ body {
     page-break-inside: avoid;
 }
 
-.cv .content .block .title span{
+.cv .content .block .title span {
     display: none;
-} 
+}
 
-.cv .content .block:first-of-type .title span{
+.cv .content .block:first-of-type .title span {
     display: initial;
-} 
+}
 
 footer {
     color: black
 }
+
 @media print {
     .no-print {
         display: none;
