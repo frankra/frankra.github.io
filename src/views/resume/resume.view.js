@@ -85,7 +85,7 @@ const template = `
                 </ul>
             </div>
         </div>
-
+        <!--
         <div 
             class="section avoid-break-inside col-sm-6 float-end ps-2 pe-2 pb-2"
             v-if="this.isNotEmptyArray(resume.education)">
@@ -98,8 +98,6 @@ const template = `
                 </resume-education-item>
             </div>
         </div>
-
-        <!--
         <div 
             class="section col-sm-6 float-end ps-2 pe-2 pb-2"
             v-if="this.isNotEmptyArray(resume.softSkills)">
