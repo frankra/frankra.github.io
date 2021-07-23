@@ -45,7 +45,7 @@ experiences:
       - description: Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres.
       - description: Designed and developed many reusable components and a library facilitate the integration between the frontend and backend APIs.
       - description: Integrated the application with major social networks, allowing paying users to post content seamlessly.
-  - role: Software Engineer/ Lead Software Engineer
+  - role: Lead Software Engineer
     company: SAP (Cloud Custom Development)
     from: "08/2012"
     to: 04/2019
