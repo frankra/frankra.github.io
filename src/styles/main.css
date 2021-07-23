@@ -1,12 +1,18 @@
 :root {
-    --header-font-color: #ffffff;
-    --content-font-color: #000000;
-    --primary-font-color: #449399;
-    --primary-font-size: 16px;
-    --secondary-font-color: #449399;
-    --secondary-font-size: 12px;
-    --smaller-font-size: 10px;
+    --header-font-color: #000000;
+    --header-bg-color: #ffffff;
     --header-font-size: 32px;
+    --header-font-line-height: 40px;
+    --body-font-color: #000000;
+    --primary-font-color: #449399;
+    --big-font-size: 16px;
+    --big-font-line-height: 17px;
+    --secondary-font-color: #6c757d;
+    --info-font-color: #449399;
+    --normal-font-size: 12px;
+    --normal-font-line-height: 13px;
+    --small-font-size: 10px;
+    --small-font-line-height: 11px;
     --title-font-size: 20px;
 }
 
@@ -20,19 +26,39 @@ body {
     color: var(--header-font-color)
 }
 
-.cv .title-secondary {
-    font-size: var(--secondary-font-size);
-    font-style: italic;
+.cv .cv-text-primary {
     color: var(--primary-font-color);
 }
 
-.cv .text-secondary {
-    font-size: var(--secondary-font-size);
-    font-style: italic;
+.cv .cv-text-info {
+    color: var(--info-font-color);
+}
+
+.cv .cv-text-secondary {
+    color: var(--secondary-font-color);
+}
+
+.cv .cv-text-body {
+    color: var(--body-font-color);
+}
+
+.cv .cv-text-big {
+    font-size: var(--big-font-size);
+    line-height: var(--big-font-line-height);
+}
+
+.cv .cv-text-normal {
+    font-size: var(--normal-font-size);
+    line-height: var(--normal-font-line-height);
+}
+
+.cv .cv-text-small {
+    font-size: var(--small-font-size);
+    line-height: var(--small-font-line-height);
 }
 
 .cv .pill {
-    font-size: var(--smaller-font-size);
+    font-size: var(--small-font-size);
     font-weight: normal;
     border-radius: 5px;
     padding-left: 5px;
@@ -43,7 +69,7 @@ body {
 }
 
 .cv .big-pill {
-    font-size: var(--secondary-font-size);
+    font-size: var(--normal-font-size);
     font-weight: normal;
     border-radius: 5px;
     padding-left: 8px;
@@ -60,8 +86,6 @@ body {
 
 .cv li {
     margin-left: -1em;
-    line-height: 18px;
-    font-size: var(--secondary-font-size);
 }
 
 .cv .print-overlay {
@@ -89,34 +113,23 @@ body {
     width: 1em;
     margin-left: -1em;
     text-align: center;
+    vertical-align: middle;
     font-size: 20px;
     color: var(--primary-font-color);
 }
 
 .cv .header {
-    background-color: #313c4e;
+    background-color: var(--header-bg-color);
     min-height: 150px;
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.cv .header .name {
     font-size: var(--header-font-size);
-    line-height: 40px;
+    line-height: var(--header-font-line-height);
 }
 
-.cv .header .role {
-    color: var(--primary-font-color);
-    font-size: var(--primary-font-size);
-}
-
-.cv .header .header-secondary-text {
-    font-size: var(--secondary-font-size);
-}
-
-.cv .header .header-secondary-text a {
+.cv a {
     text-decoration: none;
-    color: var(--header-font-color)
+    color: inherit;
 }
 
 .cv .avatar-container {
@@ -129,17 +142,16 @@ body {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 140px;
-    border: 5px solid var(--primary-font-color);
+    width: 120px;
+    border: 2px solid var(--primary-font-color);
     border-radius: 50%;
 }
 
 .cv .content {
-    color: var(--content-font-color);
+    color: var(--body-font-color);
 }
 
 .cv .content .title span {
-    padding-top: 18px;
     color: var(--primary-font-color);
     font-weight: 700;
     font-size: var(--title-font-size);
@@ -152,21 +164,6 @@ body {
 
 .cv .section.float-end {
     padding-left: 1rem!important;
-}
-
-.cv .work-experience-item .role {
-    font-size: var(--primary-font-size);
-    font-weight: bold;
-    line-height: 24px;
-}
-
-.cv .work-experience-item .company {
-    font-size: var(--primary-font-size);
-    line-height: 24px;
-}
-
-.cv .work-experience-item .description {
-    line-height: 18px;
 }
 
 .cv .content .block {
@@ -183,10 +180,6 @@ body {
 
 .cv .content .block:first-of-type .title span {
     display: initial;
-}
-
-footer {
-    color: black
 }
 
 @media print {

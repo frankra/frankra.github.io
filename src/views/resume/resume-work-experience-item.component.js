@@ -1,36 +1,25 @@
 const template = `
-<div class="work-experience-item item pb-2">
-    <div class="row role">
+<div class="item pb-2">
+    <div class="row cv-text-big fw-bold">
         <span>{{experience.role}}</span>
     </div>
-    <div class="row company">
+    <div class="row cv-text-big">
         <span>{{experience.company}}</span>
     </div>
-    <div class="row">
+    <div class="row cv-text-info cv-text-normal fst-italic">
         <div class="col-6">
-            <span class="title-secondary">{{experience.from}} - {{experience.to}}</span>
+            <span class="">{{experience.from}} - {{experience.to}}</span>
         </div>
-        <div class="col-6 text-end title-secondary">{{experience.location}}</div>
+        <div class="col-6 text-end">{{experience.location}}</div>
     </div>
-    <div class="row text-secondary description">
+    <div class="row cv-text-secondary cv-text-normal fst-italic">
         <span>{{experience.description}}</span>
     </div>
-    <div class="row mt-2">
-        <span class="title-secondary">Achievements/Tasks</span>
-    </div>
     <ul>
-        <li v-for="activity in experience.activities" class="activity">
+        <li v-for="activity in experience.activities" class="cv-text-normal mt-1">
             <span>{{activity.description}}</span>
         </li>
     </ul>
-    <div class="">
-        <span class="title-secondary">Skills</span>
-    </div>
-    <div class="d-flex flex-wrap">
-        <div v-for="skill in experience.skills" class="pill">
-            <span>{{skill.name}}</span>
-        </div>
-    </div>
 </div>
 `
 

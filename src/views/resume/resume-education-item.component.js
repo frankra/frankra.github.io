@@ -1,16 +1,16 @@
 const template = `
-<div class="education-item item">
-    <div class="row">
+<div class="item">
+    <div class="row cv-text-big">
         <span class="fw-bolder">{{education.title}}</span>
     </div>
-    <div class="row">
-        <span class="text-secondary">{{education.level}} - {{education.institution}}</span>
+    <div class="row cv-text-normal cv-text-secondary fst-italic">
+        <span class="">{{education.level}} - {{education.institution}}</span>
     </div>
-    <div class="row">
+    <div class="row cv-text-info cv-text-normal fst-italic">
         <div class="col-6">
-            <span class="title-secondary">{{education.from}} - {{education.to}}</span>
+            <span>{{education.from}} - {{education.to}}</span>
         </div>
-        <div class="col-6 text-end title-secondary">{{education.location}}</div>
+        <div class="col-6 text-end">{{education.location}}</div>
     </div>
 </div>
 `

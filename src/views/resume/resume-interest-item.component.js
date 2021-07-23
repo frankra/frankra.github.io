@@ -1,5 +1,5 @@
 const template = `
-<div class="interest-item big-pill">
+<div class="big-pill">
     <span>{{interest.name}}</span>
 </div>
 `

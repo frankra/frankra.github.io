@@ -1,5 +1,5 @@
 const template = `
-<li>
+<li class="cv-text-normal">
     <span>{{language.name}} ({{language.proficiency}})</span>
 </li>
 `

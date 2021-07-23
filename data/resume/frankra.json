@@ -15,7 +15,7 @@
       "from": "03/2021",
       "to": "Present",
       "location": "Berlin, Germany",
-      "description": "Integrated Business Suite of applications that allows non-developers to design, run and monitor custom business processes.",
+      "description": "Integrated Business Suite allows non-developers to design, run and monitor custom business processes.",
       "activities": [
         {
           "description": "Applied infrastructure as code using Terraform to automate and improve landscape management."
@@ -126,7 +126,7 @@
           "description": "Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres."
         },
         {
-          "description": "Contributed to the frontend by developing reusable components and a library to easily authenticate and consume the backend APIs."
+          "description": "Designed and developed many reusable components and a library facilitate the integration between the frontend and backend APIs."
         },
         {
           "description": "Integrated the application with major social networks, allowing paying users to post content seamlessly."
@@ -149,13 +149,10 @@
           "name": "Mongoose"
         },
         {
-          "name": "AngularJS"
+          "name": "Angular"
         },
         {
           "name": "AWS"
-        },
-        {
-          "name": "Less"
         },
         {
           "name": "Bootstrap"
@@ -164,12 +161,12 @@
           "name": "Docker"
         },
         {
-          "name": "Saas"
+          "name": "SaaS"
         }
       ]
     },
     {
-      "role": "Engineer/ Development Lead",
+      "role": "Software Engineer/ Lead Software Engineer",
       "company": "SAP (Cloud Custom Development)",
       "from": "08/2012",
       "to": "04/2019",
@@ -177,22 +174,19 @@
       "description": "Custom development team focused building new cloud applications and extending SAP cloud solutions.",
       "activities": [
         {
-          "description": "Invited over to New Zealand to join a sprint zero workshop as solution architect."
+          "description": "Selected to join a strategic sprint zero workshop on site in New Zealand as solution architect."
         },
         {
-          "description": "Invited over to Germany to work as frontend developer on two strategic projects."
+          "description": "Selected twice to join on site strategic projects in Germany as frontend developer."
         },
         {
-          "description": "Technically led small teams of developers to deliver 5 custom extensions for SAP SuccessFactors (HR Module)"
+          "description": "Technically led teams of developers to deliver 5 custom extensions for SAP SuccessFactors (HR Module)"
         },
         {
-          "description": "Designed, developed and delivered 20+ smaller custom extensions on a variety of SAP Cloud ERP modules."
+          "description": "Designed, developed and delivered 20+ custom extensions on a variety of SAP Cloud ERP modules."
         },
         {
-          "description": "Worked closely with customers and other organizations to design solutions and estimate project costs."
-        },
-        {
-          "description": "Participated in 10+ co-innovation initiatives which were later converted in gprojects."
+          "description": "Worked closely with 20+ customers and other organizations to design solutions and estimate project costs."
         },
         {
           "description": "Part of SAP Catalyst program for outstanding performers."
@@ -247,7 +241,7 @@
       "institution": "SAP",
       "location": "São Leopoldo, Brazil",
       "date": "Present",
-      "description": "I've been awarded multiple times by peers for my performance in delivering value to our customers."
+      "description": "Awarded multiple times by peers for my performance in delivering value to our customers."
     },
     {
       "title": "First Place at UFRGS Entrepreneurship Marathon (Flimbo)",
@@ -261,7 +255,7 @@
       "institution": "SAP",
       "location": "São Leopoldo, Brazil",
       "date": "2015",
-      "description": "I was nominated one of the talents of the year among the worldwide organization."
+      "description": "Nominated one of the talents of the year among the worldwide organization."
     }
   ],
   "initiatives": [
@@ -277,7 +271,7 @@
       "institution": "SAP",
       "location": "São Leopoldo, Brazil",
       "date": "2015",
-      "description": "Reused a custom Gantt chart component from a previous project and built a planning tool to provide workload visualization and distribution to our team."
+      "description": "Built a planning tool to allow workload visualization and distribution on a team of 70+ employees."
     },
     {
       "title": "Dev Sync Meetings",
@@ -349,6 +343,44 @@
     },
     {
       "name": "Leadership"
+    }
+  ],
+  "technicalSkills": [
+    {
+      "name": "Typescript"
+    },
+    {
+      "name": "Node"
+    },
+    {
+      "name": "Postgres"
+    },
+    {
+      "name": "Rxjs"
+    },
+    {
+      "name": "CQRS"
+    },
+    {
+      "name": "Event Sourcing"
+    },
+    {
+      "name": "Java"
+    },
+    {
+      "name": "Kubernetes"
+    },
+    {
+      "name": "Docker"
+    },
+    {
+      "name": "Terraform"
+    },
+    {
+      "name": "AWS"
+    },
+    {
+      "name": "SaaS"
     }
   ]
 }

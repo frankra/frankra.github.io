@@ -1,16 +1,16 @@
 const template = `
-<div class="award-item item pb-2">
-    <div class="row">
-        <span class="fw-bolder">{{award.title}}</span>
+<div class="item pb-2">
+    <div class="row cv-text-big cv-text-body fw-bold">
+        <span>{{award.title}}</span>
     </div>
-    <div class="row">
+    <div class="row cv-text-info cv-text-normal fst-italic">
         <div class="col-6">
-            <span class="title-secondary">{{award.date}} ({{award.institution}})</span>
+            <span>{{award.date}} ({{award.institution}})</span>
         </div>
-        <div class="col-6 text-end title-secondary">{{award.location}}</div>
+        <div class="col-6 text-end">{{award.location}}</div>
     </div>
     <ul>
-        <li>
+        <li class="cv-text-normal mt-1">
             <span>{{award.description}}</span>
         </li>
     </ul>

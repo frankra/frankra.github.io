@@ -6,6 +6,7 @@ import { resumeEducationItem } from './resume-education-item.component.js';
 import { resumeLanguageItem } from './resume-language-item.component.js';
 import { resumeInterestItem } from './resume-interest-item.component.js';
 import { resumeSoftSkillItem } from './resume-soft-skill-item.component.js';
+import { resumeTechnicalSkillItem } from './resume-technical-skill-item.component.js';
 
 const template = `
 <div id="resume" class="cv container">
@@ -13,7 +14,10 @@ const template = `
     <resume-header v-bind:resume="resume"></resume-header>
 
     <div class="content pb-4 ps-3 pe-3">
-        <div class="section col-sm-6 float-start ps-2 pe-2 pb-2">
+
+        <div 
+            class="section col-sm-6 float-start ps-2 pe-2 pb-2" 
+            v-if="this.isNotEmptyArray(resume.experiences)">
             <div class="block" v-for="experience in resume.experiences">
                 <div class="title">
                     <span>WORK EXPERIENCE</span>
@@ -24,7 +28,25 @@ const template = `
             </div>
         </div>
 
-        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
+        <div
+            class="section col-sm-6 float-end ps-2 pe-2 pb-2"
+            v-if="this.isNotEmptyArray(resume.technicalSkills)">
+            <div class="block" >
+                <div class="title">
+                    <span>TECHNICAL SKILLS</span>
+                </div>
+                <div class="d-flex flex-wrap pt-2">
+                    <resume-technical-skill-item 
+                        v-for="technicalSkill in resume.technicalSkills"
+                        v-bind:technicalSkill="technicalSkill">
+                    </resume-technical-skill-item>
+                </div>
+            </div>    
+        </div>
+
+        <div 
+            class="section col-sm-6 float-end ps-2 pe-2 pb-2"
+            v-if="this.isNotEmptyArray(resume.awards)">
             <div class="block" v-for="award in resume.awards">
                 <div class="title">
                     <span>AWARDS</span>
@@ -35,7 +57,9 @@ const template = `
             </div>
         </div>
 
-        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
+        <div 
+            class="section col-sm-6 float-end ps-2 pe-2 pb-2"
+            v-if="this.isNotEmptyArray(resume.initiatives)">
             <div class="block" v-for="initiative in resume.initiatives">
                 <div class="title">
                     <span>INITIATIVES</span>
@@ -46,7 +70,9 @@ const template = `
             </div>
         </div>
 
-        <div class="section avoid-break-inside col-sm-6 float-end ps-2 pe-2 pb-2">
+        <div 
+            class="section avoid-break-inside col-sm-6 float-end ps-2 pe-2 pb-2"
+            v-if="this.isNotEmptyArray(resume.languages)">
             <div class="block">
                 <div class="title">
                     <span>LANGUAGES</span>
@@ -60,7 +86,9 @@ const template = `
             </div>
         </div>
 
-        <div class="section avoid-break-inside col-sm-6 float-end ps-2 pe-2 pb-2">
+        <div 
+            class="section avoid-break-inside col-sm-6 float-end ps-2 pe-2 pb-2"
+            v-if="this.isNotEmptyArray(resume.education)">
             <div class="block" v-for="education in resume.education">
                 <div class="title">
                     <span>EDUCATION</span>
@@ -71,8 +99,10 @@ const template = `
             </div>
         </div>
 
-
-        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
+        <!--
+        <div 
+            class="section col-sm-6 float-end ps-2 pe-2 pb-2"
+            v-if="this.isNotEmptyArray(resume.softSkills)">
             <div class="block" >
                 <div class="title">
                     <span>SOFT SKILLS</span>
@@ -86,7 +116,9 @@ const template = `
             </div>    
         </div>
 
-        <div class="section col-sm-6 float-end ps-2 pe-2 pb-2">
+        <div
+            class="section col-sm-6 float-end ps-2 pe-2 pb-2"
+            v-if="this.isNotEmptyArray(resume.interests)">
             <div class="block" >
                 <div class="title">
                     <span>INTERESTS</span>
@@ -99,6 +131,7 @@ const template = `
                 </div>
             </div>    
         </div>
+        -->
     </div>
 </div>
 `;
@@ -125,7 +158,7 @@ const FOOTER_APPROX_HEIGHT_PX = 30;
 
 const resumeView = Vue.component('resume-view', {
     template,
-    data: function () {
+    data: function() {
         return {
             resume: {
                 experiences: []
@@ -224,12 +257,14 @@ const resumeView = Vue.component('resume-view', {
         },
         async loadResume() {
             const request = await fetch('/data/resume/frankra.json');
-            const resume = await request.json();
-
+            let resume = await request.json();
             this.resume = resume;
+        },
+        isNotEmptyArray(anything) {
+            return Array.isArray(anything) && anything.length > 0;
         }
     },
-    created: async function () {
+    created: async function() {
         window.addEventListener('beforeprint', this.prepareForPrinting);
         window.addEventListener('afterprint', this.resetAfterPrinting);
 
