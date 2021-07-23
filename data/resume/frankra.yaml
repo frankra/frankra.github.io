@@ -17,18 +17,11 @@ experiences:
     from: 03/2021
     to: Present
     location: Berlin, Germany
-    description: Integrated Business Suite allows non-developers to design, run and monitor custom business processes.
+    description: Integrated Business Suite that allows non-developers to design, run and monitor custom business processes.
     activities:
-      - description: Applied infrastructure as code using Terraform to automate and improve landscape management.
-      - description: Setup the integrated multitenancy strategy reusing the framework provided by the platform.
-      - description: Defined the Kafka topic management strategy for the tenant aware services.
-    skills:
-      - name: SaaS
-      - name: Typescript
-      - name: Java
-      - name: Cloud Foundry
-      - name: Kafka
-      - name: Terraform
+      - description: Applied infrastructure as code using Terraform to automate and improve landscape managemen, reducing the time to create new landscapes by 80%.
+      - description: Setup the integrated multitenancy strategy reusing the framework provided by the platform across the suite and 4 underlying applications.
+      - description: Defined and implemented the Kafka topic management strategy for the tenant aware services.
   - role: Senior Software Engineer
     company: SAP (Ruum by SAP)
     from: 04/2019
@@ -36,23 +29,10 @@ experiences:
     location: Berlin, Germany
     description: Lightweight and flexible project management tool with simple process modelling and execution features.
     activities:
-      - description: Contributed to both frontend and backend development increasing team throughput.
+      - description: Designed and developed features for both frontend and backend increasing team throughput.
       - description: Designed and implemented an end-to-end annotation-based OData API framework in NodeJS that increased developer productivity through automated pagination, filter and API generation.
       - description: Optimized SQL queries increasing overall API performance.
       - description: Developed the webhooks system allowing developers to configure and maintain integrations conveniently.
-    skills:
-      - name: Typescript
-      - name: Postgres
-      - name: Typeorm
-      - name: k8s
-      - name: CQRS
-      - name: Event Sourcing
-      - name: Redux
-      - name: Angular
-      - name: SaaS
-      - name: AWS
-      - name: Bootstrap
-      - name: Docker
   - role: Co-Founder
     company: Flimbo
     from: 03/2015
@@ -65,17 +45,6 @@ experiences:
       - description: Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres.
       - description: Designed and developed many reusable components and a library facilitate the integration between the frontend and backend APIs.
       - description: Integrated the application with major social networks, allowing paying users to post content seamlessly.
-    skills:
-      - name: Javascript
-      - name: Postgres
-      - name: Sequelize
-      - name: MongoDB
-      - name: Mongoose
-      - name: Angular
-      - name: AWS
-      - name: Bootstrap
-      - name: Docker
-      - name: SaaS
   - role: Software Engineer/ Lead Software Engineer
     company: SAP (Cloud Custom Development)
     from: "08/2012"
@@ -88,20 +57,6 @@ experiences:
       - description: Designed, developed and led teams to deliver 30+ custom extensions on a variety of SAP Cloud ERP modules
       - description: Worked closely with 20+ customers and product teams to design solutions and estimate project costs.
       - description: Part of SAP Catalyst program for outstanding performers.
-    skills:
-      - name: SaaS
-      - name: Javascript
-      - name: Java
-      - name: Spring Boot
-      - name: HANA
-      - name: Postgres
-      - name: Cloud Foundry
-      - name: AngularJS
-      - name: Bootstrap
-      - name: PHP
-      - name: Docker
-      - name: D3.js
-      - name: sapUI5
 awards:
   - title: 14 Awards for Professionalism and Teamwork
     institution: SAP
@@ -166,9 +121,12 @@ technicalSkills:
   - name: Typescript
   - name: Node
   - name: Postgres
-  - name: Rxjs
+  - name: RXJS
   - name: CQRS
   - name: Event Sourcing
+  - name: Angular
+  - name: React
+  - name: Vue
   - name: Java
   - name: Kubernetes
   - name: Docker
