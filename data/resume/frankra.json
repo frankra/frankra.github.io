@@ -18,7 +18,7 @@
       "description": "Integrated Business Suite that allows non-developers to design, run and monitor custom business processes.",
       "activities": [
         {
-          "description": "Applied infrastructure as code using Terraform to automate and improve landscape managemen, reducing the time to create new landscapes by 80%."
+          "description": "Applied infrastructure as code using Terraform to automate and improve landscape management, reducing the time to create new landscapes by 80%."
         },
         {
           "description": "Setup the integrated multitenancy strategy reusing the framework provided by the platform across the suite and 4 underlying applications."
@@ -68,9 +68,6 @@
           "description": "Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres."
         },
         {
-          "description": "Designed and developed many reusable components and a library facilitate the integration between the frontend and backend APIs."
-        },
-        {
           "description": "Integrated the application with major social networks, allowing paying users to post content seamlessly."
         }
       ]
@@ -84,16 +81,16 @@
       "description": "Custom development team focused building new cloud applications and extending SAP cloud solutions.",
       "activities": [
         {
-          "description": "Selected to join a strategic sprint zero workshop in New Zealand as solution architect."
+          "description": "Developed frontend components for a high profile project for the performance brand of a major car manufacturer which allowed them to visually plan and track their production line."
         },
         {
-          "description": "Selected to join two strategic projects in Germany as frontend developer."
+          "description": "Designed and developed frontend components and real time charts for a strategic IoT and predictive maintenance project for a major air compressor provider."
         },
         {
-          "description": "Designed, developed and led teams to deliver 30+ custom extensions on a variety of SAP Cloud ERP modules"
+          "description": "Designed, developed and led teams to deliver 30+ custom extensions on a variety of SAP Cloud ERP modules."
         },
         {
-          "description": "Worked closely with 20+ customers and product teams to design solutions and estimate project costs."
+          "description": "Worked closely with 20+ customers and product teams to design cloud solutions and estimate project costs."
         },
         {
           "description": "Outstanding performance evaluation given for 5 years in a row."
@@ -176,7 +173,7 @@
       "name": "Motorcycles"
     },
     {
-      "name": "Crossfit"
+      "name": "Gym"
     },
     {
       "name": "Games"
@@ -238,6 +235,18 @@
     },
     {
       "name": "Vue"
+    },
+    {
+      "name": "D3.js"
+    },
+    {
+      "name": "Mocha"
+    },
+    {
+      "name": "Chai"
+    },
+    {
+      "name": "Sinon"
     },
     {
       "name": "Java"

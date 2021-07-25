@@ -19,7 +19,7 @@ experiences:
     location: Berlin, Germany
     description: Integrated Business Suite that allows non-developers to design, run and monitor custom business processes.
     activities:
-      - description: Applied infrastructure as code using Terraform to automate and improve landscape managemen, reducing the time to create new landscapes by 80%.
+      - description: Applied infrastructure as code using Terraform to automate and improve landscape management, reducing the time to create new landscapes by 80%.
       - description: Setup the integrated multitenancy strategy reusing the framework provided by the platform across the suite and 4 underlying applications.
       - description: Defined and implemented the Kafka topic management strategy for the tenant aware services.
   - role: Senior Software Engineer
@@ -43,7 +43,6 @@ experiences:
       - description: Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap and kick start the development of our startup.
       - description: Defined and implemented commercial model to cover our operational expenses.
       - description: Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres.
-      - description: Designed and developed many reusable components and a library facilitate the integration between the frontend and backend APIs.
       - description: Integrated the application with major social networks, allowing paying users to post content seamlessly.
   - role: Lead Software Engineer
     company: SAP (Cloud Custom Development)
@@ -52,10 +51,10 @@ experiences:
     location: São Leopoldo, Brazil
     description: Custom development team focused building new cloud applications and extending SAP cloud solutions.
     activities:
-      - description: Selected to join a strategic sprint zero workshop in New Zealand as solution architect. 
-      - description: Selected to join two strategic projects in Germany as frontend developer.
-      - description: Designed, developed and led teams to deliver 30+ custom extensions on a variety of SAP Cloud ERP modules
-      - description: Worked closely with 20+ customers and product teams to design solutions and estimate project costs.
+      - description: Developed frontend components for a high profile project for the performance brand of a major car manufacturer which allowed them to visually plan and track their production line.
+      - description: Designed and developed frontend components and real time charts for a strategic IoT and predictive maintenance project for a major air compressor provider.
+      - description: Designed, developed and led teams to deliver 30+ custom extensions on a variety of SAP Cloud ERP modules.
+      - description: Worked closely with 20+ customers and product teams to design cloud solutions and estimate project costs.
       - description: Outstanding performance evaluation given for 5 years in a row.
 awards:
   - title: 14 Awards for Professionalism and Teamwork
@@ -105,7 +104,7 @@ languages:
     proficiency: Intermediate
 interests:
   - name: Motorcycles
-  - name: Crossfit
+  - name: Gym
   - name: Games
   - name: Electronic Music
   - name: Programming
@@ -127,6 +126,10 @@ technicalSkills:
   - name: Angular
   - name: React
   - name: Vue
+  - name: D3.js
+  - name: Mocha
+  - name: Chai
+  - name: Sinon
   - name: Java
   - name: Kubernetes
   - name: Docker
