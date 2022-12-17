@@ -1,19 +1,19 @@
 :root {
-    --header-font-color: #000000;
+    --header-font-color: #3f3f3f;
     --header-bg-color: #ffffff;
     --header-font-size: 32px;
     --header-font-line-height: 40px;
-    --body-font-color: #000000;
+    --body-font-color: #3f3f3f;
     --primary-font-color: #449399;
-    --big-font-size: 16px;
-    --big-font-line-height: 17px;
+    --big-font-size: 18px;
+    --big-font-line-height: 18px;
     --secondary-font-color: #6c757d;
     --info-font-color: #449399;
-    --normal-font-size: 12px;
-    --normal-font-line-height: 13px;
-    --small-font-size: 10px;
-    --small-font-line-height: 11px;
-    --title-font-size: 18px;
+    --normal-font-size: 14px;
+    --normal-font-line-height: 14px;
+    --small-font-size: 12px;
+    --small-font-line-height: 12px;
+    --title-font-size: 20px;
 }
 
 body {
@@ -21,7 +21,6 @@ body {
 }
 
 .cv {
-    font-weight: 400;
     font-style: normal;
     color: var(--header-font-color)
 }

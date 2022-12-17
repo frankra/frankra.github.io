@@ -3,7 +3,7 @@ const template = `
     <div class="row cv-text-big cv-text-body fw-bold">
         <span>{{award.title}}</span>
     </div>
-    <div class="row cv-text-info cv-text-normal fst-italic">
+    <div class="row cv-text-secondary cv-text-normal fst-italic">
         <div class="col-6">
             <span>{{award.date}} ({{award.institution}})</span>
         </div>
