@@ -2,20 +2,30 @@
 name: Rafael Frank
 role: Senior Software Engineer
 description:
-  8+ years of developing world class enterprise software. Extraordinary
+  10+ years of developing world class enterprise software. Extraordinary
   performer recognized by management and peers for skillset, leadership, positivity
   and getting the job done.
 email: rafael.h.frank@gmail.com
-phone: "+49 151 6783 4643"
+phone: "+49 152 0548 8328"
 location: Berlin, Germany
 githubUrl: https://github.com/frankra
 linkedinUrl: https://linkedin.com/in/frankra
 webUrl: https://frankra.github.io
 experiences:
+  # - role: Lead Architect (Deputy CTO)
+  #   company: SAP (Business Process Intelligence)
+  #   from: 10/2021
+  #   to: Present
+  #   location: Berlin, Germany
+  #   description: Integrated Business Suite that allows non-developers to design, run and monitor custom business processes.
+  #   activities:
+  #     - description: Applied infrastructure as code using Terraform to automate and improve landscape management, reducing the time to create new landscapes by 80%.
+  #     - description: Setup the integrated multitenancy strategy reusing the framework provided by the platform across the suite and 4 underlying applications.
+  #     - description: Defined and implemented the Kafka topic management strategy for the tenant aware services.
   - role: Senior Software Engineer
     company: SAP (Business Process Intelligence)
     from: 03/2021
-    to: Present
+    to: 10/2021
     location: Berlin, Germany
     description: Integrated Business Suite that allows non-developers to design, run and monitor custom business processes.
     activities:
