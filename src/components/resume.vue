@@ -6,11 +6,11 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="resume">
     <!-- Header -->
     <div class="text-center">
-      <h2 class="text-uppercase mb-0">{{ resume.name }}</h2>
-      <h4 class="fw-normal mb-0">{{ resume.role }}</h4>
+      <div class="title fw-bold text-uppercase mb-1">{{ resume.name }}</div>
+      <div class="text-accent-lg fw-normal mb-1">{{ resume.role }}</div>
       <div class="d-flex justify-content-center mx-auto gap-4">
         <p>{{ resume.phone }}</p>
         <p>{{ resume.email }}</p>
@@ -20,22 +20,22 @@ defineProps({
     </div>
 
     <!-- Summary -->
-    <h4 class="text-center fw-normal pt-4">Summary</h4>
+    <div class="text-center text-accent-lg fw-normal pt-5">Summary</div>
     <hr class="mt-2 mb-2" />
     <p>{{ resume.description }}</p>
 
     <!-- Experience -->
-    <h4 class="text-center fw-normal pt-4">Experience</h4>
+    <div class="text-center text-accent-lg fw-normal pt-5">Experience</div>
     <hr class="mt-2 mb-2" />
     <div>
       <div class="mb-4" v-for="experience in resume.experiences" :key="experience.role">
         <div class="d-flex justify-content-between">
           <p class="mb-0 text-accent-lg">{{ experience.company }}</p>
-          <p class="mb-0">{{ experience.location }}</p>
+          <p>{{ experience.location }}</p>
         </div>
         <div class="d-flex justify-content-between">
           <p class="mb-0 text-accent-md">{{ experience.role }}</p>
-          <p class="mb-0">{{ experience.from }} - {{ experience.to }}</p>
+          <p>{{ experience.from }} - {{ experience.to }}</p>
         </div>
         <div>
           <span v-for="(skill, index) in experience.skills" :key="skill">
@@ -52,17 +52,17 @@ defineProps({
     </div>
 
     <!-- Education -->
-    <h4 class="text-center fw-normal pt-4">Education</h4>
+    <div class="text-center text-accent-lg fw-normal pt-5">Education</div>
     <hr class="mt-2 mb-2" />
     <div>
       <div v-for="education in resume.education" :key="education.title">
         <div class="d-flex justify-content-between">
-          <p class="mb-0">{{ education.institution }}</p>
-          <p class="mb-0">{{ education.location }}</p>
+          <p>{{ education.institution }}</p>
+          <p>{{ education.location }}</p>
         </div>
         <div class="d-flex justify-content-between">
-          <p class="mb-0">{{ education.title }}</p>
-          <p class="mb-0">{{ education.from }} - {{ education.to }}</p>
+          <p>{{ education.title }}</p>
+          <p>{{ education.from }} - {{ education.to }}</p>
         </div>
         <ul class="ps-4">
           <li v-for="activity in education.activities" :key="activity.description">
@@ -76,4 +76,46 @@ defineProps({
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.resume {
+  color: #3e3e3e;
+}
+
+.resume p {
+  margin-bottom: 0;
+}
+
+.title {
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.text-accent-lg {
+  color: #000;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.text-accent-md {
+  color: #000;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+@media print {
+  .resume {
+    font-size: 8pt;
+  }
+
+  .text-accent-lg {
+    font-size: 11pt !important;
+    line-height: 11pt !important;
+  }
+
+  .text-accent-md {
+    font-size: 10pt !important;
+    line-height: 10pt !important;
+  }
+}
+</style>
