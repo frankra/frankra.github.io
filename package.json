@@ -1,25 +1,22 @@
 {
   "name": "frankra.github.io",
-  "version": "1.0.0",
-  "description": "Frankra's Personal Webpage",
-  "main": "index.html",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server .",
-    "compile-cv": "js-yaml data/resume/frankra.yaml > data/resume/frankra.json"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/frankra/frankra.github.io.git"
+  "dependencies": {
+    "vue": "^3.5.25"
   },
-  "author": "frankra",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/frankra/frankra.github.io/issues"
-  },
-  "homepage": "https://github.com/frankra/frankra.github.io#readme",
   "devDependencies": {
-    "http-server": "^0.12.3",
-    "js-yaml": "^3.14.1"
+    "@vitejs/plugin-vue": "^6.0.2",
+    "vite": "^7.2.4",
+    "vite-plugin-vue-devtools": "^8.0.5"
   }
 }

@@ -3,31 +3,12 @@
   "role": "Senior Software Engineer",
   "description": "8+ years of developing world class enterprise software. Extraordinary performer recognized by management and peers for skillset, leadership, positivity and getting the job done.",
   "email": "rafael.h.frank@gmail.com",
-  "phone": "+49 151 6783 4643",
+  "phone": "+49 152 0548 8328",
   "location": "Berlin, Germany",
   "githubUrl": "https://github.com/frankra",
   "linkedinUrl": "https://linkedin.com/in/frankra",
   "webUrl": "https://frankra.github.io",
   "experiences": [
-    {
-      "role": "Senior Software Engineer",
-      "company": "SAP (Business Process Intelligence)",
-      "from": "03/2021",
-      "to": "Present",
-      "location": "Berlin, Germany",
-      "description": "Integrated Business Suite that allows non-developers to design, run and monitor custom business processes.",
-      "activities": [
-        {
-          "description": "Applied infrastructure as code using Terraform to automate and improve landscape management, reducing the time to create new landscapes by 80%."
-        },
-        {
-          "description": "Setup the integrated multitenancy strategy reusing the framework provided by the platform across the suite and 4 underlying applications."
-        },
-        {
-          "description": "Defined and implemented the Kafka topic management strategy for the tenant aware services."
-        }
-      ]
-    },
     {
       "role": "Senior Software Engineer",
       "company": "SAP (Ruum by SAP)",
@@ -121,33 +102,10 @@
       "description": "Nominated one of the talents of the year among the worldwide organization."
     }
   ],
-  "initiatives": [
-    {
-      "title": "Blockchain Unit",
-      "institution": "SAP",
-      "location": "São Leopoldo, Brazil",
-      "date": "2017",
-      "description": "Led a blockchain studies group to identify potential applications in our customer projects."
-    },
-    {
-      "title": "Team Calendar",
-      "institution": "SAP",
-      "location": "São Leopoldo, Brazil",
-      "date": "2015",
-      "description": "Built a planning tool to allow workload visualization and distribution on a team of 70+ employees."
-    },
-    {
-      "title": "Dev Sync Meetings",
-      "institution": "SAP",
-      "location": "São Leopoldo, Brazil",
-      "date": "2014",
-      "description": "Recurring event that invited peers to discuss and present new technologies in a very informal and friendly way."
-    }
-  ],
   "education": [
     {
       "title": "Software Analysis and Development",
-      "institution": "Universidade do Vale do Rio dos Sinos",
+      "institution": "Universidade do Vale do Rio dos Sinos (Unisinos)",
       "from": "01/2010",
       "to": "12/2017",
       "level": "Superior",
@@ -166,105 +124,6 @@
     {
       "name": "German",
       "proficiency": "Intermediate"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Motorcycles"
-    },
-    {
-      "name": "Gym"
-    },
-    {
-      "name": "Games"
-    },
-    {
-      "name": "Electronic Music"
-    },
-    {
-      "name": "Programming"
-    },
-    {
-      "name": "Cyber Security"
-    },
-    {
-      "name": "Machine Learning"
-    }
-  ],
-  "softSkills": [
-    {
-      "name": "Effective Communication"
-    },
-    {
-      "name": "Empathy"
-    },
-    {
-      "name": "Teamwork"
-    },
-    {
-      "name": "Problem-solving"
-    },
-    {
-      "name": "Leadership"
-    }
-  ],
-  "technicalSkills": [
-    {
-      "name": "Typescript"
-    },
-    {
-      "name": "Node"
-    },
-    {
-      "name": "Postgres"
-    },
-    {
-      "name": "RXJS"
-    },
-    {
-      "name": "CQRS"
-    },
-    {
-      "name": "Event Sourcing"
-    },
-    {
-      "name": "Angular"
-    },
-    {
-      "name": "React"
-    },
-    {
-      "name": "Vue"
-    },
-    {
-      "name": "D3.js"
-    },
-    {
-      "name": "Mocha"
-    },
-    {
-      "name": "Chai"
-    },
-    {
-      "name": "Sinon"
-    },
-    {
-      "name": "Java"
-    },
-    {
-      "name": "Kubernetes"
-    },
-    {
-      "name": "Docker"
-    },
-    {
-      "name": "Terraform"
-    },
-    {
-      "name": "AWS"
-    },
-    {
-      "name": "SaaS"
     }
   ]
 }
