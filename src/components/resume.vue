@@ -3,6 +3,10 @@ import resume from "../../data/resume/resume.json";
 defineProps({
   resume: resume
 })
+
+function toBold(text) {
+  return text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
+}
 </script>
 
 <template>
@@ -22,7 +26,7 @@ defineProps({
     <!-- Summary -->
     <div class="text-center text-accent-lg fw-normal pt-5">Summary</div>
     <hr class="mt-2 mb-2" />
-    <p>{{ resume.description }}</p>
+    <p v-html="toBold(resume.description)"></p>
 
     <!-- Experience -->
     <div class="text-center text-accent-lg fw-normal pt-5">Experience</div>
@@ -45,7 +49,7 @@ defineProps({
         <!-- <p>{{ experience.description }}</p> -->
         <ul class="ps-4">
           <li v-for="activity in experience.activities" :key="activity.description">
-            {{ activity.description }}
+            <p v-html="toBold(activity.description)"></p>
           </li>
         </ul>
       </div>

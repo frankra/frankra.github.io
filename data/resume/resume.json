@@ -1,13 +1,26 @@
 {
   "name": "Rafael Frank",
   "role": "Staff Software Engineer",
-  "description": "13+ years of experience in fullstack software development. Extraordinary performer recognized by management and peers for skillset, leadership, positivity and getting the job done.",
+  "description": "**13+ years of experience** in distributed systems and fullstack development. **Staff Software Engineer** driving **technical strategy**, **cross-team architecture**, and engineering quality across high-scale, mission-critical platforms (AWS, Kubernetes, Golang). Proven success in reliability improvements (e.g., reducing data loss from 4% to 0.03%) and elevating organizational engineering standards (RFCs, Mentorship).",
   "email": "rafael.h.frank@gmail.com",
   "phone": "+49 152 0548 8328",
   "location": "Berlin, Germany",
   "githubUrl": "https://github.com/frankra",
   "linkedinUrl": "https://linkedin.com/in/frankra",
   "webUrl": "https://frankra.github.io",
+  "coreCompetencies": [
+    "Golang",
+    "Node JS",
+    "Typescript",
+    "AWS (EC2, SQS/SNS, RDS)",
+    "Kubernetes",
+    "Microservices",
+    "Distributed Systems (SAGA, Outbox Pattern)",
+    "Clean Architecture",
+    "MySQL",
+    "Postgres",
+    "Redis"
+  ],
   "experiences": [
     {
       "role": "Staff Software Engineer",
@@ -15,44 +28,39 @@
       "from": "01/2023",
       "to": "Present",
       "location": "Berlin, Germany",
-      "description": "Lightweight and flexible project management tool with simple process modelling and execution features.",
+      "description": "Leading the vendor data management squad, responsible for the high-scale, core entry point and source of truth for vendor data across the platform, handling **millions of requests daily**.",
       "skills": [
         "Golang",
         "AWS",
         "Mysql",
-        "Kafka",
-        "Kotlin",
         "Kubernetes",
         "SQS/SNS",
-        "Redis"
+        "Redis",
+        "Microservices",
+        "Distributed Systems",
+        "System Design (RFC)",
+        "Clean Architecture",
+        "SOLID Principles",
+        "Parallel Programming"
       ],
       "activities": [
         {
-          "description": "Designed, coordinated and led the implementation of several cross squad features"
+          "description": "Authored and presented organization-wide design documents (RFCs), detailing technical strategy for complex systems, including the **Transactional Outbox pattern**, an **Idempotent SQS Consumer framework**, and a solution for handling distributed transactions using the **SAGA pattern**."
         },
         {
-          "description": "Led a major refactoring of the squad services, substantially improving the development experience and time to market, as well as reducing the amount of weekly support requests by half"
+          "description": "Investigated and identified a major technical debt issue in vendor availability causing unintended downtime, quantifying the potential business loss at **~5 million EUR annually**. Drove a strategic resolution by leading the **cross-team migration** of the high-impact logic to the Logistics team's stack."
         },
         {
-          "description": "Started an initiative to rework a long overdue piece of technical debt that has the potential of increasing the company revenue by ~5 million EUR YoY"
+          "description": "Architected and implemented a generic and reusable **concurrent SQS idempotent consumer** framework, utilizing row-level locks to ensure sequential processing for single entities while maximizing parallel throughput."
         },
         {
-          "description": "Became the mentor of the squad and successfully improved the team's quality standards by introducing design patterns, SOLID and clean architecture principles"
+          "description": "Led a major refactoring of core services, **substantially improving the development experience** and **reducing the amount of weekly support requests by half**."
         },
         {
-          "description": "Improved the observability of the squad services, allowing for better data driven decisions and faster incident detection"
+          "description": "Drove engineering quality standards by acting as the squad's technical mentor (SOLID, Clean Arch) and **improved system reliability** by enhancing observability and producing runbooks, expediting mitigation of major incidents."
         },
         {
-          "description": "Reworked the notifications framework of the core service of the squad, reducing the error rate and data loss from 4% to 0.03%"
-        },
-        {
-          "description": "Supported on the resolution of many production incidents, either by bringing the relevant colleagues together, or by actively helping with troubleshooting and mitigation"
-        },
-        {
-          "description": "Produced a variety of runbooks to help on-call engineers to recover their system to a healthy state. These helped in a faster mitigation and resolution of at least two major incidents"
-        },
-        {
-          "description": "Produced and presented organization-wide a variety of design documents (RFC), which included a design for a Transactional Outbox to prevent loss of notifications, an Idempotent SQS Consumer framework and a solution for handling distributed transactions, based on the SAGA pattern"
+          "description": "Reworked the notifications framework of the core service, dramatically **reducing the error rate and critical data loss from 4% to 0.03%**."
         }
       ]
     },
@@ -62,7 +70,7 @@
       "from": "11/2021",
       "to": "11/2022",
       "location": "Berlin, Germany",
-      "description": "Lightweight and flexible project management tool with simple process modelling and execution features.",
+      "description": "Worked on the development of a supply chain analytics and optimization platform with collaboration and automation features.",
       "skills": [
         "Node JS",
         "Typescript",
@@ -70,23 +78,27 @@
         "MongoDB",
         "Redis",
         "Kubernetes",
-        "AWS SQS",
         "Azure",
+        "AWS SQS",
         "Python",
-        "Websockets"
+        "Websockets",
+        "Architecture",
+        "Docker",
+        "DevOps/CI/CD",
+        "SCRUM/Agile"
       ],
       "activities": [
         {
-          "description": "Architected, designed (UX) and led the development team to build a supply chain analytics platform which leverages existing supply chain optimization applications and adds on top collaboration and automation features"
+          "description": "Architected, designed, and led the development team to build a supply chain analytics platform, integrating existing optimization applications with collaboration and automation features."
         },
         {
-          "description": "Implemented several processes such as product roadmap planning, SCRUM, code reviews, pull requests, greatly increasing team efficiency and deliverables quality"
+          "description": "Implemented critical engineering processes (SCRUM, code reviews, PRs, product roadmap planning), greatly increasing team efficiency and deliverables quality."
         },
         {
-          "description": "Dockerized and moved ~80% of the infrastructure out of bare metal servers to azure kubernetes, allowing the implementation of automated continuous releases"
+          "description": "Dockerized and migrated ~80% of the infrastructure from bare metal to Azure Kubernetes, establishing a foundation for automated continuous releases."
         },
         {
-          "description": "Introduced automated testing culture, which allowed us to integrate these tests in the deployment pipeline, thus greatly reducing the occurrence of regressions"
+          "description": "Introduced and enforced an automated testing culture, integrating tests into the deployment pipeline to greatly reduce the occurrence of regressions."
         }
       ]
     },
@@ -96,7 +108,7 @@
       "from": "03/2019",
       "to": "11/2021",
       "location": "Berlin, Germany",
-      "description": "Lightweight and flexible project management tool with simple process modelling and execution features.",
+      "description": "Fullstack engineer developing Ruum by SAP, a project management tool with simple process modelling and execution features.",
       "skills": [
         "Node JS",
         "Typescript",
@@ -105,30 +117,32 @@
         "Redis",
         "Kubernetes",
         "AWS",
-        "OData"
+        "OData",
+        "API Design",
+        "Webhooks"
       ],
       "activities": [
         {
-          "description": "Architected and developed many fullstack features, flexibly contributing to the areas most in need to guarantee stable and steady feature releases"
+          "description": "Architected and implemented an end-to-end annotation-based OData API framework in NodeJS that drastically reduced the time needed to release new public APIs (estimated 40% time savings)."
         },
         {
-          "description": "Architected and implemented an end-to-end annotation-based OData API framework in NodeJS that drastically reduced the time needed to release new public APIs"
+          "description": "Architected and developed the complete webhooks system (Fullstack), allowing developers to configure, maintain, and troubleshoot integrations conveniently."
         },
         {
-          "description": "Optimized Postgres SQL queries greatly increasing overall application and public API performance"
+          "description": "Optimized Postgres SQL queries, leading to a significant increase in overall application and public API performance."
         },
         {
-          "description": "Architected and developed the webhooks system (Fullstack) allowing developers to configure, maintain and troubleshoot integrations conveniently"
+          "description": "Architected and developed many fullstack features, flexibly contributing to areas most in need to guarantee stable and steady feature releases."
         }
       ]
     },
     {
-      "role": "Software Engineer",
+      "role": "Software Engineer / Consultant",
       "company": "SAP",
       "from": "08/2012",
       "to": "03/2019",
       "location": "São Leopoldo, Brazil",
-      "description": "Custom development team focused building new cloud applications and extending SAP cloud solutions.",
+      "description": "Worked as a fullstack engineer and consultant, delivering custom tailored cloud solutions for SAP Cloud Platform and SAP Cloud ERP.",
       "skills": [
         "Node JS",
         "Javascript",
@@ -138,50 +152,51 @@
         "D3.js",
         "SAP UI5",
         "SAP Cloud Platform",
-        "OData"
+        "OData",
+        "Consulting",
+        "IoT",
+        "Project Estimation",
+        "Team Leadership"
       ],
       "activities": [
         {
-          "description": "Developed frontend components for a high profile project for the performance brand of a major car manufacturer which allowed them to visually plan and track their production line."
-        },
-        {
-          "description": "Designed and developed frontend components and real time charts for a strategic IoT and predictive maintenance project for a major air compressor provider."
-        },
-        {
-          "description": "Designed, developed and led teams to deliver 30+ custom extensions on a variety of SAP Cloud ERP modules."
+          "description": "Designed, developed, and led teams to deliver 30+ custom extensions on a variety of SAP Cloud ERP modules."
         },
         {
           "description": "Worked closely with 20+ customers and product teams to design cloud solutions and estimate project costs."
         },
         {
-          "description": "Outstanding performance evaluation given for 5 years in a row."
+          "description": "Designed and developed frontend components and real-time charts for a strategic IoT and predictive maintenance project for a major air compressor provider."
+        },
+        {
+          "description": "Received an **Outstanding Performance Evaluation for 5 years in a row**, demonstrating sustained high-level contribution."
         }
       ]
     },
     {
-      "role": "Co-Founder",
+      "role": "Co-Founder / Fullstack Engineer",
       "company": "Flimbo",
       "from": "03/2015",
       "to": "07/2016",
       "location": "São Leopoldo, Brazil",
-      "description": "Online vectorial editor, focused on creating, maintaining and sharing marketing content on online social networks.",
+      "description": "Co-Founder of a startup focused on creating, maintaining, and sharing marketing content on online social networks.",
       "skills": [
         "Node JS",
         "Javascript",
         "Postgres",
         "MongoDB",
         "AWS",
-        "AngularJS"
+        "AngularJS",
+        "Entrepreneurship",
+        "Backend Architecture",
+        "Security"
       ],
       "activities": [
         {
-          "description": "Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap and kick start the development of our startup."
+          "description": "Designed and developed the backend stack focusing on security, performance, and scalability using NodeJS and Postgres."
         },
         {
-          "description": "Defined and implemented commercial model to cover our operational expenses."
-        },
-        {
-          "description": "Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres."
+          "description": "Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap, and kick-start development."
         },
         {
           "description": "Integrated the application with major social networks, allowing paying users to post content seamlessly."
@@ -195,7 +210,7 @@
       "institution": "SAP",
       "location": "São Leopoldo, Brazil",
       "date": "Present",
-      "description": "Awarded multiple times by peers for my performance in delivering value to our customers."
+      "description": "Awarded multiple times by peers for performance in delivering value to customers and teamwork."
     },
     {
       "title": "First Place at UFRGS Entrepreneurship Marathon (Flimbo)",
@@ -214,7 +229,7 @@
   ],
   "education": [
     {
-      "title": "Software Analysis and Development",
+      "title": "Software Analysis and Development (Superior - Part-Time Study)",
       "institution": "Universidade do Vale do Rio dos Sinos (Unisinos)",
       "from": "01/2010",
       "to": "12/2017",
@@ -222,7 +237,7 @@
       "location": "São Leopoldo, Brazil",
       "activities": [
         {
-          "description": "Thesis focused on clean architecture and dependency injection"
+          "description": "Thesis focused on clean architecture and dependency injection."
         }
       ]
     }
@@ -234,11 +249,11 @@
     },
     {
       "name": "English",
-      "proficiency": "Proficient"
+      "proficiency": "Proficient (C1)"
     },
     {
       "name": "German",
-      "proficiency": "Basic"
+      "proficiency": "Intermediate (B1)"
     }
   ]
 }
