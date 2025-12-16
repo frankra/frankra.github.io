@@ -28,13 +28,13 @@ defineProps({
     <div class="text-center text-accent-lg fw-normal pt-5">Experience</div>
     <hr class="mt-2 mb-2" />
     <div>
-      <div class="mb-4" v-for="experience in resume.experiences" :key="experience.role">
+      <div class="section mb-4" v-for="experience in resume.experiences" :key="experience.role">
         <div class="d-flex justify-content-between">
-          <p class="mb-0 text-accent-lg">{{ experience.company }}</p>
+          <p class="text-accent-lg">{{ experience.company }}</p>
           <p>{{ experience.location }}</p>
         </div>
         <div class="d-flex justify-content-between">
-          <p class="mb-0 text-accent-md">{{ experience.role }}</p>
+          <p class="text-accent-md">{{ experience.role }}</p>
           <p>{{ experience.from }} - {{ experience.to }}</p>
         </div>
         <div>
@@ -57,11 +57,11 @@ defineProps({
     <div>
       <div v-for="education in resume.education" :key="education.title">
         <div class="d-flex justify-content-between">
-          <p>{{ education.institution }}</p>
+          <p class="text-accent-lg">{{ education.institution }}</p>
           <p>{{ education.location }}</p>
         </div>
         <div class="d-flex justify-content-between">
-          <p>{{ education.title }}</p>
+          <p class="text-accent-md">{{ education.title }}</p>
           <p>{{ education.from }} - {{ education.to }}</p>
         </div>
         <ul class="ps-4">
@@ -78,7 +78,7 @@ defineProps({
 
 <style scoped>
 .resume {
-  color: #3e3e3e;
+  color: #545454;
 }
 
 .resume p {
@@ -103,9 +103,14 @@ defineProps({
   line-height: 1.1rem;
 }
 
+.section {
+  break-inside: avoid;
+}
+
 @media print {
   .resume {
     font-size: 8pt;
+    color: #434343;
   }
 
   .text-accent-lg {
@@ -116,6 +121,21 @@ defineProps({
   .text-accent-md {
     font-size: 10pt !important;
     line-height: 10pt !important;
+  }
+}
+
+@media screen {
+  .resume {
+    margin-top: 50px
+  }
+}
+
+@media (min-width: 960px) {
+  .resume {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 300px;
   }
 }
 </style>
