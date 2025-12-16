@@ -6,93 +6,74 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-center">
-    <h1>{{ resume.name }}</h1>
-    <h2>{{ resume.role }}</h2>
-    <div class="d-flex justify-content-between">
-      <p>{{ resume.phone }}</p>
-      <p>{{ resume.email }}</p>
-      <p>{{ resume.linkedinUrl }}</p>
-      <p>{{ resume.location }}</p>
+  <div>
+    <!-- Header -->
+    <div class="text-center">
+      <h2 class="text-uppercase mb-0">{{ resume.name }}</h2>
+      <h4 class="fw-normal mb-0">{{ resume.role }}</h4>
+      <div class="d-flex justify-content-center mx-auto gap-4">
+        <p>{{ resume.phone }}</p>
+        <p>{{ resume.email }}</p>
+        <p>{{ resume.linkedinUrl }}</p>
+        <p>{{ resume.location }}</p>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <h4 class="text-center fw-normal pt-4">Summary</h4>
+    <hr class="mt-2 mb-2" />
+    <p>{{ resume.description }}</p>
+
+    <!-- Experience -->
+    <h4 class="text-center fw-normal pt-4">Experience</h4>
+    <hr class="mt-2 mb-2" />
+    <div>
+      <div class="mb-4" v-for="experience in resume.experiences" :key="experience.role">
+        <div class="d-flex justify-content-between">
+          <p class="mb-0 text-accent-lg">{{ experience.company }}</p>
+          <p class="mb-0">{{ experience.location }}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="mb-0 text-accent-md">{{ experience.role }}</p>
+          <p class="mb-0">{{ experience.from }} - {{ experience.to }}</p>
+        </div>
+        <div>
+          <span v-for="(skill, index) in experience.skills" :key="skill">
+            {{ skill }}<span v-if="index < experience.skills.length - 1">, </span>
+          </span>
+        </div>
+        <!-- <p>{{ experience.description }}</p> -->
+        <ul class="ps-4">
+          <li v-for="activity in experience.activities" :key="activity.description">
+            {{ activity.description }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <h4 class="text-center fw-normal pt-4">Education</h4>
+    <hr class="mt-2 mb-2" />
+    <div>
+      <div v-for="education in resume.education" :key="education.title">
+        <div class="d-flex justify-content-between">
+          <p class="mb-0">{{ education.institution }}</p>
+          <p class="mb-0">{{ education.location }}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="mb-0">{{ education.title }}</p>
+          <p class="mb-0">{{ education.from }} - {{ education.to }}</p>
+        </div>
+        <ul class="ps-4">
+          <li v-for="activity in education.activities" :key="activity.description">
+            {{ activity.description }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <h2>Summary</h2>
-  <hr />
-  <p>{{ resume.description }}</p>
 
-  <h2>Experiences</h2>
-  <hr />
-  <ul>
-    <li v-for="experience in resume.experiences" :key="experience.role">
-      <div class="d-flex justify-content-between">
-        <h3>{{ experience.company }}</h3>
-        <p>{{ experience.location }}</p>
-      </div>
-      <div class="d-flex justify-content-between">
-        <h3>{{ experience.role }}</h3>
-        <p>{{ experience.from }} - {{ experience.to }}</p>
-      </div>
-
-      <p>{{ experience.description }}</p>
-      <ul>
-        <li v-for="activity in experience.activities" :key="activity.description">
-          {{ activity.description }}
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <h2>Awards</h2>
-  <ul>
-    <li v-for="award in resume.awards" :key="award.title">
-      <h3>{{ award.title }}</h3>
-      <p>{{ award.institution }}</p>
-      <p>{{ award.location }}</p>
-      <p>{{ award.date }}</p>
-      <p>{{ award.description }}</p>
-    </li>
-  </ul>
-
-  <h2>Education</h2>
-  <ul>
-    <li v-for="education in resume.education" :key="education.title">
-      <h3>{{ education.title }}</h3>
-      <p>{{ education.institution }}</p>
-      <p>{{ education.from }} - {{ education.to }}</p>
-      <p>{{ education.level }}</p>
-      <p>{{ education.location }}</p>
-    </li>
-  </ul>
-
-  <h2>Languages</h2>
-  <ul>
-    <li v-for="language in resume.languages" :key="language.name">
-      <h3>{{ language.name }}</h3>
-      <p>{{ language.proficiency }}</p>
-    </li>
-  </ul>
-
-  <h2>Interests</h2>
-  <ul>
-    <li v-for="interest in resume.interests" :key="interest.name">
-      <h3>{{ interest.name }}</h3>
-    </li>
-  </ul>
-
-  <h2>Soft Skills</h2>
-  <ul>
-    <li v-for="skill in resume.softSkills" :key="skill.name">
-      <h3>{{ skill.name }}</h3>
-    </li>
-  </ul>
-
-  <h2>Technical Skills</h2>
-  <ul>
-    <li v-for="skill in resume.technicalSkills" :key="skill.name">
-      <h3>{{ skill.name }}</h3>
-    </li>
-  </ul>
 </template>
 
 <style scoped></style>

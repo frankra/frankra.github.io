@@ -10,6 +10,7 @@ interface Experience {
     location: string;
     description: string;
     activities: Activity[];
+    skills: string[];
 }
 
 interface Award {
@@ -35,6 +36,7 @@ interface Education {
     to: string;
     level: string;
     location: string;
+    activities: Activity[];
 }
 
 interface Language {

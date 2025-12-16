@@ -1,6 +1,6 @@
 {
   "name": "Rafael Frank",
-  "role": "Senior Software Engineer",
+  "role": "Staff Software Engineer",
   "description": "8+ years of developing world class enterprise software. Extraordinary performer recognized by management and peers for skillset, leadership, positivity and getting the job done.",
   "email": "rafael.h.frank@gmail.com",
   "phone": "+49 152 0548 8328",
@@ -10,56 +10,136 @@
   "webUrl": "https://frankra.github.io",
   "experiences": [
     {
-      "role": "Senior Software Engineer",
-      "company": "SAP (Ruum by SAP)",
-      "from": "04/2019",
-      "to": "03/2021",
+      "role": "Staff Software Engineer",
+      "company": "Delivery Hero",
+      "from": "01/2023",
+      "to": "Present",
       "location": "Berlin, Germany",
       "description": "Lightweight and flexible project management tool with simple process modelling and execution features.",
+      "skills": [
+        "Golang",
+        "AWS",
+        "Mysql",
+        "Kafka",
+        "Kotlin",
+        "Kubernetes",
+        "SQS/SNS",
+        "Redis"
+      ],
       "activities": [
         {
-          "description": "Designed and developed features for both frontend and backend increasing team throughput."
+          "description": "Designed, coordinated and led the implementation of several cross squad features"
         },
         {
-          "description": "Designed and implemented an end-to-end annotation-based OData API framework in NodeJS that increased developer productivity through automated pagination, filter and API generation."
+          "description": "Led a major refactoring of the squad services, substantially improving the development experience and time to market, as well as reducing the amount of weekly support requests by half"
         },
         {
-          "description": "Optimized SQL queries increasing overall API performance."
+          "description": "Started an initiative to rework a long overdue piece of technical debt that has the potential of increasing the company revenue by ~5 million EUR YoY"
         },
         {
-          "description": "Developed the webhooks system allowing developers to configure and maintain integrations conveniently."
+          "description": "Became the mentor of the squad and successfully improved the team's quality standards by introducing design patterns, SOLID and clean architecture principles"
+        },
+        {
+          "description": "Improved the observability of the squad services, allowing for better data driven decisions and faster incident detection"
+        },
+        {
+          "description": "Reworked the notifications framework of the core service of the squad, reducing the error rate and data loss from 4% to 0.03%"
+        },
+        {
+          "description": "Supported on the resolution of many production incidents, either by bringing the relevant colleagues together, or by actively helping with troubleshooting and mitigation"
+        },
+        {
+          "description": "Produced a variety of runbooks to help on-call engineers to recover their system to a healthy state. These helped in a faster mitigation and resolution of at least two major incidents"
+        },
+        {
+          "description": "Produced and presented organization-wide a variety of design documents (RFC), which included a design for a Transactional Outbox to prevent loss of notifications, an Idempotent SQS Consumer framework and a solution for handling distributed transactions, based on the SAGA pattern"
         }
       ]
     },
     {
-      "role": "Co-Founder",
-      "company": "Flimbo",
-      "from": "03/2015",
-      "to": "07/2016",
-      "location": "São Leopoldo, Brazil",
-      "description": "Online vectorial editor, focused on creating, maintaining and sharing marketing content on online social networks.",
+      "role": "Lead Software Engineer (Deputy CTO)",
+      "company": "Log-hub AG",
+      "from": "11/2021",
+      "to": "11/2022",
+      "location": "Berlin, Germany",
+      "description": "Lightweight and flexible project management tool with simple process modelling and execution features.",
+      "skills": [
+        "Node JS",
+        "Typescript",
+        "Angular",
+        "MongoDB",
+        "Redis",
+        "Kubernetes",
+        "AWS SQS",
+        "Azure",
+        "Python",
+        "Websockets"
+      ],
       "activities": [
         {
-          "description": "Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap and kick start the development of our startup."
+          "description": "Architected, designed (UX) and led the development team to build a supply chain analytics platform which leverages existing supply chain optimization applications and adds on top collaboration and automation features"
         },
         {
-          "description": "Defined and implemented commercial model to cover our operational expenses."
+          "description": "Implemented several processes such as product roadmap planning, SCRUM, code reviews, pull requests, greatly increasing team efficiency and deliverables quality"
         },
         {
-          "description": "Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres."
+          "description": "Dockerized and moved ~80% of the infrastructure out of bare metal servers to azure kubernetes, allowing the implementation of automated continuous releases"
         },
         {
-          "description": "Integrated the application with major social networks, allowing paying users to post content seamlessly."
+          "description": "Introduced automated testing culture, which allowed us to integrate these tests in the deployment pipeline, thus greatly reducing the occurrence of regressions"
         }
       ]
     },
     {
-      "role": "Lead Software Engineer",
-      "company": "SAP (Cloud Custom Development)",
+      "role": "Senior Software Engineer",
+      "company": "SAP",
+      "from": "03/2019",
+      "to": "11/2021",
+      "location": "Berlin, Germany",
+      "description": "Lightweight and flexible project management tool with simple process modelling and execution features.",
+      "skills": [
+        "Node JS",
+        "Typescript",
+        "Angular",
+        "Postgres",
+        "Redis",
+        "Kubernetes",
+        "AWS",
+        "OData"
+      ],
+      "activities": [
+        {
+          "description": "Architected and developed many fullstack features, flexibly contributing to the areas most in need to guarantee stable and steady feature releases"
+        },
+        {
+          "description": "Architected and implemented an end-to-end annotation-based OData API framework in NodeJS that drastically reduced the time needed to release new public APIs"
+        },
+        {
+          "description": "Optimized Postgres SQL queries greatly increasing overall application and public API performance"
+        },
+        {
+          "description": "Architected and developed the webhooks system (Fullstack) allowing developers to configure, maintain and troubleshoot integrations conveniently"
+        }
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "SAP",
       "from": "08/2012",
-      "to": "04/2019",
+      "to": "03/2019",
       "location": "São Leopoldo, Brazil",
       "description": "Custom development team focused building new cloud applications and extending SAP cloud solutions.",
+      "skills": [
+        "Node JS",
+        "Javascript",
+        "PHP",
+        "Java",
+        "AngularJS",
+        "D3.js",
+        "SAP UI5",
+        "SAP Cloud Platform",
+        "OData"
+      ],
       "activities": [
         {
           "description": "Developed frontend components for a high profile project for the performance brand of a major car manufacturer which allowed them to visually plan and track their production line."
@@ -75,6 +155,36 @@
         },
         {
           "description": "Outstanding performance evaluation given for 5 years in a row."
+        }
+      ]
+    },
+    {
+      "role": "Co-Founder",
+      "company": "Flimbo",
+      "from": "03/2015",
+      "to": "07/2016",
+      "location": "São Leopoldo, Brazil",
+      "description": "Online vectorial editor, focused on creating, maintaining and sharing marketing content on online social networks.",
+      "skills": [
+        "Node JS",
+        "Javascript",
+        "Postgres",
+        "MongoDB",
+        "AWS",
+        "AngularJS"
+      ],
+      "activities": [
+        {
+          "description": "Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap and kick start the development of our startup."
+        },
+        {
+          "description": "Defined and implemented commercial model to cover our operational expenses."
+        },
+        {
+          "description": "Designed and developed the backend stack focusing on security, performance and scalability using NodeJS and Postgres."
+        },
+        {
+          "description": "Integrated the application with major social networks, allowing paying users to post content seamlessly."
         }
       ]
     }
@@ -109,7 +219,12 @@
       "from": "01/2010",
       "to": "12/2017",
       "level": "Superior",
-      "location": "São Leopoldo, Brazil"
+      "location": "São Leopoldo, Brazil",
+      "activities": [
+        {
+          "description": "Thesis focused on clean architecture and dependency injection"
+        }
+      ]
     }
   ],
   "languages": [
@@ -123,7 +238,7 @@
     },
     {
       "name": "German",
-      "proficiency": "Intermediate"
+      "proficiency": "Basic"
     }
   ]
 }
