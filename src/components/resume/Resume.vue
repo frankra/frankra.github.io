@@ -1,9 +1,10 @@
 <script setup>
-import resume from "../../data/resume/resume.json";
+import resume from "../../../data/resume/resume.json";
 defineProps({
   resume: resume
 })
 
+// Helper function to convert **bold** text to HTML bold tags
 function toBold(text) {
   return text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
 }
@@ -17,8 +18,8 @@ function toBold(text) {
       <div class="text-accent-lg fw-normal mb-1">{{ resume.role }}</div>
       <div class="d-flex justify-content-center mx-auto gap-4">
         <p>{{ resume.phone }}</p>
-        <p>{{ resume.email }}</p>
-        <p>{{ resume.linkedinUrl }}</p>
+        <a class="text-decoration-none" :href="resume.email" target="_blank">{{ resume.email }}</a>
+        <a class="text-decoration-none" :href="resume.linkedinUrl" target="_blank">{{ resume.linkedinUrl }}</a>
         <p>{{ resume.location }}</p>
       </div>
     </div>
@@ -32,7 +33,7 @@ function toBold(text) {
     <div class="text-center text-accent-lg fw-normal pt-5">Experience</div>
     <hr class="mt-2 mb-2" />
     <div>
-      <div class="section mb-4" v-for="experience in resume.experiences" :key="experience.role">
+      <div class="block mb-5" v-for="experience in resume.experiences" :key="experience.role">
         <div class="d-flex justify-content-between">
           <p class="text-accent-lg">{{ experience.company }}</p>
           <p>{{ experience.location }}</p>
@@ -42,16 +43,19 @@ function toBold(text) {
           <p>{{ experience.from }} - {{ experience.to }}</p>
         </div>
         <div>
-          <span v-for="(skill, index) in experience.skills" :key="skill">
-            {{ skill }}<span v-if="index < experience.skills.length - 1">, </span>
-          </span>
+          <p v-html="toBold(experience.description)"></p>
         </div>
-        <!-- <p>{{ experience.description }}</p> -->
+
         <ul class="ps-4">
           <li v-for="activity in experience.activities" :key="activity.description">
             <p v-html="toBold(activity.description)"></p>
           </li>
         </ul>
+        <div class="text-secondary">
+          <span v-for="(skill, index) in experience.skills" :key="skill">
+            {{ skill }}<span v-if="index < experience.skills.length - 1">, </span>
+          </span>
+        </div>
       </div>
     </div>
 
@@ -59,7 +63,7 @@ function toBold(text) {
     <div class="text-center text-accent-lg fw-normal pt-5">Education</div>
     <hr class="mt-2 mb-2" />
     <div>
-      <div v-for="education in resume.education" :key="education.title">
+      <div class="block mb-5" v-for="education in resume.education" :key="education.title">
         <div class="d-flex justify-content-between">
           <p class="text-accent-lg">{{ education.institution }}</p>
           <p>{{ education.location }}</p>
@@ -68,20 +72,53 @@ function toBold(text) {
           <p class="text-accent-md">{{ education.title }}</p>
           <p>{{ education.from }} - {{ education.to }}</p>
         </div>
+        <div>
+          <p v-html="toBold(education.description)"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <div class="text-center text-accent-lg fw-normal pt-5">Awards</div>
+    <hr class="mt-2 mb-2" />
+    <div>
+      <div class="block mb-5" v-for="award in resume.awards" :key="award.title">
+        <div class="d-flex justify-content-between">
+          <p class="text-accent-lg">{{ award.title }}</p>
+          <p>{{ award.location }}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="text-accent-md">{{ award.institution }}</p>
+          <p>{{ award.date }}</p>
+        </div>
+        <div>
+          <p v-html="toBold(award.description)"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="text-center text-accent-lg fw-normal pt-5">Languages</div>
+    <hr class="mt-2 mb-2" />
+    <div>
+      <div class="block mb-5">
         <ul class="ps-4">
-          <li v-for="activity in education.activities" :key="activity.description">
-            {{ activity.description }}
+          <li v-for="language in resume.languages" :key="language.title">
+            {{ language.name }}: {{ language.proficiency }}
           </li>
         </ul>
       </div>
     </div>
+
   </div>
-
-
 </template>
 
 <style scoped>
 .resume {
+  color: #545454;
+}
+
+.resume a {
   color: #545454;
 }
 
@@ -107,13 +144,17 @@ function toBold(text) {
   line-height: 1.1rem;
 }
 
-.section {
+.block {
   break-inside: avoid;
 }
 
 @media print {
   .resume {
     font-size: 8pt;
+    color: #434343;
+  }
+
+  .resume a {
     color: #434343;
   }
 

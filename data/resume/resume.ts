@@ -36,7 +36,7 @@ interface Education {
     to: string;
     level: string;
     location: string;
-    activities: Activity[];
+    description: string;
 }
 
 interface Language {

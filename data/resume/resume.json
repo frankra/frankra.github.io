@@ -8,19 +8,6 @@
   "githubUrl": "https://github.com/frankra",
   "linkedinUrl": "https://linkedin.com/in/frankra",
   "webUrl": "https://frankra.github.io",
-  "coreCompetencies": [
-    "Golang",
-    "Node JS",
-    "Typescript",
-    "AWS (EC2, SQS/SNS, RDS)",
-    "Kubernetes",
-    "Microservices",
-    "Distributed Systems (SAGA, Outbox Pattern)",
-    "Clean Architecture",
-    "MySQL",
-    "Postgres",
-    "Redis"
-  ],
   "experiences": [
     {
       "role": "Staff Software Engineer",
@@ -66,7 +53,7 @@
     },
     {
       "role": "Lead Software Engineer",
-      "company": "Log-hub AG",
+      "company": "Log-hub",
       "from": "11/2021",
       "to": "11/2022",
       "location": "Berlin, Germany",
@@ -175,7 +162,7 @@
     },
     {
       "role": "Co-Founder / Fullstack Engineer",
-      "company": "Flimbo",
+      "company": "Flimbo (Deskfy)",
       "from": "03/2015",
       "to": "07/2016",
       "location": "São Leopoldo, Brazil",
@@ -209,12 +196,12 @@
       "title": "14 Awards for Professionalism and Teamwork",
       "institution": "SAP",
       "location": "São Leopoldo, Brazil",
-      "date": "Present",
+      "date": "2012 - 2019",
       "description": "Awarded multiple times by peers for performance in delivering value to customers and teamwork."
     },
     {
       "title": "First Place at UFRGS Entrepreneurship Marathon (Flimbo)",
-      "institution": "UFRGS",
+      "institution": "Universidade Federal do Rio Grande do Sul (UFRGS)",
       "location": "Porto Alegre, Brazil",
       "date": "2016",
       "description": "Flimbo won as the most innovative and overall most mature startup on the event."
@@ -235,11 +222,7 @@
       "to": "12/2017",
       "level": "Superior",
       "location": "São Leopoldo, Brazil",
-      "activities": [
-        {
-          "description": "Thesis focused on clean architecture and dependency injection."
-        }
-      ]
+      "description": "Thesis focused on clean architecture and dependency injection."
     }
   ],
   "languages": [
@@ -249,11 +232,11 @@
     },
     {
       "name": "English",
-      "proficiency": "Proficient (C1)"
+      "proficiency": "Proficient"
     },
     {
       "name": "German",
-      "proficiency": "Intermediate (B1)"
+      "proficiency": "Intermediate (B1 TELC)"
     }
   ]
 }
