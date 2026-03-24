@@ -17,8 +17,8 @@ function toBold(text) {
       <div class="title fw-bold text-uppercase mb-1">{{ resume.name }}</div>
       <div class="text-accent-lg fw-normal mb-1">{{ resume.role }}</div>
       <div class="d-flex justify-content-center mx-auto gap-4">
-        <p>{{ resume.phone }}</p>
-        <a class="text-decoration-none" :href="resume.email" target="_blank">{{ resume.email }}</a>
+        <a class="text-decoration-none" :href="'tel:'+resume.phone" target="_blank">{{ resume.phone }}</a>
+        <a class="text-decoration-none" :href="'mailto:'+resume.email" target="_blank">{{ resume.email }}</a>
         <a class="text-decoration-none" :href="resume.linkedinUrl" target="_blank">{{ resume.linkedinUrl }}</a>
         <p>{{ resume.location }}</p>
       </div>

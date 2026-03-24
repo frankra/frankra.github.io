@@ -124,6 +124,36 @@
       ]
     },
     {
+      "role": "Co-Founder / Fullstack Engineer",
+      "company": "Flimbo (Deskfy)",
+      "from": "03/2015",
+      "to": "07/2016",
+      "location": "São Leopoldo, Brazil",
+      "description": "Co-Founder of a startup focused on creating, maintaining, and sharing marketing content on online social networks.",
+      "skills": [
+        "Node JS",
+        "Javascript",
+        "Postgres",
+        "MongoDB",
+        "AWS",
+        "AngularJS",
+        "Entrepreneurship",
+        "Backend Architecture",
+        "Security"
+      ],
+      "activities": [
+        {
+          "description": "Designed and developed the backend stack focusing on security, performance, and scalability using NodeJS and Postgres."
+        },
+        {
+          "description": "Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap, and kick-start development."
+        },
+        {
+          "description": "Integrated the application with major social networks, allowing paying users to post content seamlessly."
+        }
+      ]
+    },
+    {
       "role": "Software Engineer / Consultant",
       "company": "SAP",
       "from": "08/2012",
@@ -157,36 +187,6 @@
         },
         {
           "description": "Received an **Outstanding Performance Evaluation for 5 years in a row**, demonstrating sustained high-level contribution."
-        }
-      ]
-    },
-    {
-      "role": "Co-Founder / Fullstack Engineer",
-      "company": "Flimbo (Deskfy)",
-      "from": "03/2015",
-      "to": "07/2016",
-      "location": "São Leopoldo, Brazil",
-      "description": "Co-Founder of a startup focused on creating, maintaining, and sharing marketing content on online social networks.",
-      "skills": [
-        "Node JS",
-        "Javascript",
-        "Postgres",
-        "MongoDB",
-        "AWS",
-        "AngularJS",
-        "Entrepreneurship",
-        "Backend Architecture",
-        "Security"
-      ],
-      "activities": [
-        {
-          "description": "Designed and developed the backend stack focusing on security, performance, and scalability using NodeJS and Postgres."
-        },
-        {
-          "description": "Assembled and mobilized the initial team of co-founders to further develop the idea, roadmap, and kick-start development."
-        },
-        {
-          "description": "Integrated the application with major social networks, allowing paying users to post content seamlessly."
         }
       ]
     }
@@ -232,7 +232,7 @@
     },
     {
       "name": "English",
-      "proficiency": "Proficient"
+      "proficiency": "Fluent"
     },
     {
       "name": "German",
